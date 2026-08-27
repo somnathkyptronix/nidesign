@@ -4286,6 +4286,15 @@ body.mobile-menu-locked {
 }
 
 @media (max-width: 1024px) {
+  main {
+    padding-top: 105px !important;
+  }
+  #services-showcase {
+    padding-top: 15px !important;
+  }
+  .find-your-container {
+    padding-top: 12px !important;
+  }
   .menu-row {
     display: none !important;
   }
