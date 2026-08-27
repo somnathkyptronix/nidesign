@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>All Services — NI Design | Digital Architecture, UI/UX, Growth & AI</title>
+	<meta name="description" content="Explore full-spectrum digital services by NI Design: Website Development, UI/UX Design, Digital Marketing, SEO & GEO, Performance Marketing, Branding, Lead Generation, and AI Automation." />
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="style.css" media="all" />
+	
+	<!-- Favicons -->
+	<link rel="icon" href="images/NILOGO.png" type="image/png" />
+
+	<!-- Scripts -->
+	<script src="site.js" defer></script>
+</head>
+<body class="min-h-screen bg-[#2a1714] text-white selection:bg-cyan-400 selection:text-black">
+	
+	<!-- ==========================================================================
+	     NAVBAR
+	     ========================================================================== -->
+	<header class="fixed top-0 z-50 w-full duration-300 py-3 tablet:py-4">
+		<div data-navigation class="px-4 tablet:px-8 relative w-full flex items-center justify-between">
+			<a href="index.html" class="flex items-center group" rel="home">
+				<img src="images/NILOGO.png" alt="NI-DESIGN" style="height: 48px; width: auto; max-height: 52px;" class="object-contain drop-shadow-[0_0_14px_rgba(0,229,255,0.4)] transition-transform duration-300 group-hover:scale-105" />
+			</a>
+			<div class="flex-row items-center gap-3 flex">
+				<div class="menu-row flex-row items-center gap-3 hidden tablet:flex">
+					<!-- Work -->
+					<div class="dropdown dropdown-item-group relative py-2">
+						<a href="work.html" class="nav-link font-heading flex items-center gap-1">
+							<span class="btn-text">Work</span>
+							<svg class="size-3 opacity-60 transition-transform duration-300 dropdown-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+						</a>
+						<ul class="dropdown_menu dropdown_menu--animated dropdown_menu-rotateX">
+							<li class="dropdown_item dropdown_item-1"><a href="work.html"><span>01</span> All Projects</a></li>
+							<li class="dropdown_item dropdown_item-2"><a href="work.html#case-studies-section"><span>02</span> Web Design</a></li>
+							<li class="dropdown_item dropdown_item-3"><a href="work.html#case-studies-section"><span>03</span> E-commerce</a></li>
+							<li class="dropdown_item dropdown_item-4"><a href="work.html#case-studies-section"><span>04</span> Branding</a></li>
+							<li class="dropdown_item dropdown_item-5"><a href="work.html#case-studies-section"><span>05</span> AI & Automation</a></li>
+							<li class="dropdown_item dropdown_item-6"><a href="work.html#case-studies-section"><span>06</span> Case Studies</a></li>
+						</ul>
+					</div>
+					<span class="font-heading">/</span>
+
+					<!-- Services -->
+					<div class="dropdown dropdown-item-group relative py-2">
+						<a href="services.html" class="nav-link font-heading flex items-center gap-1 text-cyan-400">
+							<span class="btn-text">Services</span>
+							<svg class="size-3 opacity-60 transition-transform duration-300 dropdown-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+						</a>
+						<ul class="dropdown_menu dropdown_menu--animated dropdown_menu-rotateX">
+							<li class="dropdown_item dropdown_item-1"><a href="#services-showcase"><span>01</span> Website Development</a></li>
+							<li class="dropdown_item dropdown_item-2"><a href="#services-showcase"><span>02</span> UI/UX Design</a></li>
+							<li class="dropdown_item dropdown_item-3"><a href="#services-showcase"><span>03</span> Digital Marketing</a></li>
+							<li class="dropdown_item dropdown_item-4"><a href="#services-showcase"><span>04</span> SEO &amp; GEO</a></li>
+							<li class="dropdown_item dropdown_item-5"><a href="#services-showcase"><span>05</span> Performance Marketing</a></li>
+							<li class="dropdown_item dropdown_item-6"><a href="#services-showcase"><span>06</span> Branding</a></li>
+							<li class="dropdown_item dropdown_item-7"><a href="#services-showcase"><span>07</span> Lead Generation</a></li>
+							<li class="dropdown_item dropdown_item-8"><a href="#services-showcase"><span>08</span> AI Automation</a></li>
+						</ul>
+					</div>
+					<span class="font-heading">/</span>
+
+					<!-- Industries -->
+					<div class="dropdown dropdown-item-group relative py-2">
+						<a href="index.html#industries" class="nav-link font-heading flex items-center gap-1">
+							<span class="btn-text">Industries</span>
+							<svg class="size-3 opacity-60 transition-transform duration-300 dropdown-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+						</a>
+						<ul class="dropdown_menu dropdown_menu--animated dropdown_menu-rotateX">
+							<li class="dropdown_item dropdown_item-1"><a href="index.html#industries"><span>01</span> Healthcare</a></li>
+							<li class="dropdown_item dropdown_item-2"><a href="index.html#industries"><span>02</span> Real Estate</a></li>
+							<li class="dropdown_item dropdown_item-3"><a href="index.html#industries"><span>03</span> E-commerce</a></li>
+							<li class="dropdown_item dropdown_item-4"><a href="index.html#industries"><span>04</span> Education</a></li>
+							<li class="dropdown_item dropdown_item-5"><a href="index.html#industries"><span>05</span> Hospitality</a></li>
+							<li class="dropdown_item dropdown_item-6"><a href="index.html#industries"><span>06</span> Restaurants</a></li>
+							<li class="dropdown_item dropdown_item-7"><a href="index.html#industries"><span>07</span> SaaS &amp; Technology</a></li>
+							<li class="dropdown_item dropdown_item-8"><a href="index.html#industries"><span>08</span> Professional Services</a></li>
+						</ul>
+					</div>
+					<span class="font-heading">/</span>
+
+					<!-- About -->
+					<div class="dropdown dropdown-item-group relative py-2">
+						<a href="index.html#about" class="nav-link font-heading flex items-center gap-1">
+							<span class="btn-text">About</span>
+							<svg class="size-3 opacity-60 transition-transform duration-300 dropdown-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+						</a>
+						<ul class="dropdown_menu dropdown_menu--animated dropdown_menu-rotateX">
+							<li class="dropdown_item dropdown_item-1"><a href="index.html#about"><span>01</span> Our Story</a></li>
+							<li class="dropdown_item dropdown_item-2"><a href="index.html#about"><span>02</span> Our Approach</a></li>
+							<li class="dropdown_item dropdown_item-3"><a href="index.html#about"><span>03</span> Our Team</a></li>
+							<li class="dropdown_item dropdown_item-4"><a href="index.html#about"><span>04</span> Why NI Design</a></li>
+						</ul>
+					</div>
+					<span class="font-heading">/</span>
+
+					<!-- Insights -->
+					<div class="dropdown dropdown-item-group relative py-2">
+						<a href="index.html#physics-section" class="nav-link font-heading flex items-center gap-1">
+							<span class="btn-text">Insights</span>
+							<svg class="size-3 opacity-60 transition-transform duration-300 dropdown-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+						</a>
+						<ul class="dropdown_menu dropdown_menu--animated dropdown_menu-rotateX">
+							<li class="dropdown_item dropdown_item-1"><a href="index.html#physics-section"><span>01</span> Blog</a></li>
+							<li class="dropdown_item dropdown_item-2"><a href="index.html#physics-section"><span>02</span> Digital Marketing</a></li>
+							<li class="dropdown_item dropdown_item-3"><a href="index.html#physics-section"><span>03</span> Web Development</a></li>
+							<li class="dropdown_item dropdown_item-4"><a href="index.html#physics-section"><span>04</span> Design</a></li>
+							<li class="dropdown_item dropdown_item-5"><a href="index.html#physics-section"><span>05</span> Resources</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- CTA Let's Talk -->
+				<a href="javascript:void(0)" onclick="window.openProjectModal && window.openProjectModal(event)" class="h-[44px] flex text-white button-primary font-heading ml-5 brown cursor-pointer">
+					<svg class="h-full fill-brown" viewBox="0 0 34 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M6.2653e-05 33.9999L0 208.5L34 208.5L34.0001 -0.000108298L6.2653e-05 33.9999Z"/>
+					</svg>
+					<div class="px-5 bg-brown flex items-center justify-center btn-text -mx-[1px] tracking-wide whitespace-nowrap">Let's Talk →</div>
+					<svg class="h-full fill-brown" viewBox="0 0 34 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M33.9999 174.5L34 0L-7.62939e-06 -1.48619e-06L-8.54078e-05 208.5L33.9999 174.5Z"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<main class="pt-20">
+		<!-- ==========================================================================
+		     SERVICES SHOWCASE — SAME PINNED SCROLL LIKE INDUSTRIES PAGE
+		     ========================================================================== -->
+		<div id="services-showcase" class="grid grid-cols-5 gap-8 laptop:gap-12 py-4 tablet:py-6 min-h-screen items-center relative overflow-hidden">
+			
+			<!-- Left Side Sticky / Pinned Title & CTA -->
+			<div class="flex flex-col gap-4 w-full text-white z-30 relative max-tablet:px-4 tablet:pl-8 col-span-5 tablet:col-span-2 find-your-container">
+				<h4 class="capitalize is-h1 flex flex-col w-full">
+					<span class="self-start">Explore Our</span>
+					<span class="w-full flex items-center gap-4">
+						<div class="bg-gradient-to-l from-white to-transparent h-[6px] w-[60px] laptop:w-[120px]"></div>
+						<span class="flex-shrink-0">
+							Services
+						</span>
+					</span>
+				</h4>
+				<div class="flex flex-col gap-8 laptop:ml-[136px]">
+					<p class="w-full max-w-[400px]">Full-spectrum digital architecture, conversion-focused UI/UX, growth engines, and autonomous AI systems built for market supremacy.</p>
+					<a href="javascript:void(0)" onclick="window.openProjectModal && window.openProjectModal(event)" class="button second font-heading white">
+						<div class="line-1"></div>
+						<div class="line-2"></div>
+						<div class="btn-primary-lines btn-primary-lines-1">
+							<div class="line-1"></div>
+							<div class="line-2"></div>
+							<div class="btn-primary-lines btn-primary-lines-2">
+								<div class="line-1"></div>
+								<div class="line-2"></div>
+								<div class="btn-text">
+									Get Started
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<!-- Right Side 8 Polygon Beveled Cards Swiper -->
+			<div class="block col-span-5 tablet:col-span-3 text-brown overflow-hidden relative swiper-container !cursor-grab">
+				<div class="max-tablet:hidden drag font-heading absolute top-0 left-0 bg-brown text-white py-[6px] px-3 z-40 pointer-events-none -translate-x-1/2 -translate-y-1/2 flex gap-3 items-center">
+					<svg class="size-3" viewbox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0.734835 2.73483C0.588388 2.88128 0.588388 3.11872 0.734835 3.26516L3.12132 5.65165C3.26777 5.7981 3.5052 5.7981 3.65165 5.65165C3.7981 5.5052 3.7981 5.26777 3.65165 5.12132L1.53033 3L3.65165 0.878679C3.7981 0.732233 3.7981 0.494796 3.65165 0.348349C3.5052 0.201902 3.26777 0.201902 3.12132 0.348349L0.734835 2.73483ZM9 2.625L1 2.625L1 3.375L9 3.375L9 2.625Z" fill="white"/>
+					</svg>
+					Drag
+					<svg class="size-3" viewbox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M8.26517 3.26517C8.41161 3.11872 8.41161 2.88128 8.26517 2.73483L5.87868 0.34835C5.73223 0.201903 5.4948 0.201903 5.34835 0.34835C5.2019 0.494796 5.2019 0.732233 5.34835 0.87868L7.46967 3L5.34835 5.12132C5.2019 5.26777 5.2019 5.5052 5.34835 5.65165C5.4948 5.7981 5.73223 5.7981 5.87868 5.65165L8.26517 3.26517ZM0 3.375H8V2.625H0V3.375Z" fill="white"/>
+					</svg>
+				</div>
+
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						
+						<!-- 01 Website Development -->
+						<div class="swiper-slide relative pl-4 pr-[1px] h-full">
+							<svg class="w-full" viewbox="0 0 454 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M382 0H0V72H454L382 0Z" fill="white"/>
+							</svg>
+							<div class="absolute pl-5 top-6 left-6 flex items-center gap-2 supertitle">
+								ai
+								<div class="bg-gradient-to-l from-brown to-transparent h-[2px] w-12"></div>
+								01
+							</div>
+							<div class="bg-white -my-[1px] p-6 py-6 laptop:py-8 flex flex-col gap-4 laptop:gap-6 min-h-[290px] laptop:min-h-[340px] relative">
+								<h4 class="is-h2">Website Development<br/><br/></h4>
+								<p class="para-indent">High-performance, bespoke web architectures crafted with cutting-edge frontends (Next.js, 3D WebGL) and ultra-fast backend microservices engineered for 99+ PageSpeed scores.</p>
+							</div>
+							<div class="absolute bottom-6 right-6 flex items-center gap-[6px] supertitle z-10">
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+							</div>
+							<svg class="w-full" viewbox="0 0 454 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M72 72L454 72L454 0L6.29444e-06 -3.96899e-05L72 72Z" fill="white"/>
+							</svg>
+						</div>
+
+						<!-- 02 UI/UX Design -->
+						<div class="swiper-slide relative pl-4 pr-[1px] h-full">
+							<svg class="w-full" viewbox="0 0 454 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M382 0H0V72H454L382 0Z" fill="white"/>
+							</svg>
+							<div class="absolute pl-5 top-6 left-6 flex items-center gap-2 supertitle">
+								ai
+								<div class="bg-gradient-to-l from-brown to-transparent h-[2px] w-12"></div>
+								02
+							</div>
+							<div class="bg-white -my-[1px] p-6 py-6 laptop:py-8 flex flex-col gap-4 laptop:gap-6 min-h-[290px] laptop:min-h-[340px] relative">
+								<h4 class="is-h2">UI/UX Design<br/><br/></h4>
+								<p class="para-indent">Intuitive interfaces built through user psychology, behavioral data, and interactive motion. We architect scalable Figma design systems and conversion-focused customer journeys.</p>
+							</div>
+							<div class="absolute bottom-6 right-6 flex items-center gap-[6px] supertitle z-10">
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+							</div>
+							<svg class="w-full" viewbox="0 0 454 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M72 72L454 72L454 0L6.29444e-06 -3.96899e-05L72 72Z" fill="white"/>
+							</svg>
+						</div>
+
+						<!-- 03 Digital Marketing -->
+						<div class="swiper-slide relative pl-4 pr-[1px] h-full">
+							<svg class="w-full" viewbox="0 0 454 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M382 0H0V72H454L382 0Z" fill="white"/>
+							</svg>
+							<div class="absolute pl-5 top-6 left-6 flex items-center gap-2 supertitle">
+								ai
+								<div class="bg-gradient-to-l from-brown to-transparent h-[2px] w-12"></div>
+								03
+							</div>
+							<div class="bg-white -my-[1px] p-6 py-6 laptop:py-8 flex flex-col gap-4 laptop:gap-6 min-h-[290px] laptop:min-h-[340px] relative">
+								<h4 class="is-h2">Digital Marketing<br/><br/></h4>
+								<p class="para-indent">Full-funnel growth ecosystems combining high-impact content architecture, social media viral engines, Klaviyo lifecycle email marketing, and PR amplification.</p>
+							</div>
+							<div class="absolute bottom-6 right-6 flex items-center gap-[6px] supertitle z-10">
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+							</div>
+							<svg class="w-full" viewbox="0 0 454 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M72 72L454 72L454 0L6.29444e-06 -3.96899e-05L72 72Z" fill="white"/>
+							</svg>
+						</div>
+
+						<!-- 04 SEO & GEO -->
+						<div class="swiper-slide relative pl-4 pr-[1px] h-full">
+							<svg class="w-full" viewbox="0 0 454 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M382 0H0V72H454L382 0Z" fill="white"/>
+							</svg>
+							<div class="absolute pl-5 top-6 left-6 flex items-center gap-2 supertitle">
+								ai
+								<div class="bg-gradient-to-l from-brown to-transparent h-[2px] w-12"></div>
+								04
+							</div>
+							<div class="bg-white -my-[1px] p-6 py-6 laptop:py-8 flex flex-col gap-4 laptop:gap-6 min-h-[290px] laptop:min-h-[340px] relative">
+								<h4 class="is-h2">SEO &amp; GEO<br/><br/></h4>
+								<p class="para-indent">Generative Engine Optimization (GEO) ensuring top brand recommendations across AI models (ChatGPT, Perplexity, Claude) combined with technical Google SEO ranking dominance.</p>
+							</div>
+							<div class="absolute bottom-6 right-6 flex items-center gap-[6px] supertitle z-10">
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+							</div>
+							<svg class="w-full" viewbox="0 0 454 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M72 72L454 72L454 0L6.29444e-06 -3.96899e-05L72 72Z" fill="white"/>
+							</svg>
+						</div>
+
+						<!-- 05 Performance Marketing -->
+						<div class="swiper-slide relative pl-4 pr-[1px] h-full">
+							<svg class="w-full" viewbox="0 0 454 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M382 0H0V72H454L382 0Z" fill="white"/>
+							</svg>
+							<div class="absolute pl-5 top-6 left-6 flex items-center gap-2 supertitle">
+								ai
+								<div class="bg-gradient-to-l from-brown to-transparent h-[2px] w-12"></div>
+								05
+							</div>
+							<div class="bg-white -my-[1px] p-6 py-6 laptop:py-8 flex flex-col gap-4 laptop:gap-6 min-h-[290px] laptop:min-h-[340px] relative">
+								<h4 class="is-h2">Performance Marketing<br/><br/></h4>
+								<p class="para-indent">Precision paid customer acquisition across Google Search, Meta Ads, and LinkedIn with dynamic landing page CRO and algorithmic bid management delivering 4.8x+ ROAS.</p>
+							</div>
+							<div class="absolute bottom-6 right-6 flex items-center gap-[6px] supertitle z-10">
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+							</div>
+							<svg class="w-full" viewbox="0 0 454 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M72 72L454 72L454 0L6.29444e-06 -3.96899e-05L72 72Z" fill="white"/>
+							</svg>
+						</div>
+
+						<!-- 06 Branding & Identity -->
+						<div class="swiper-slide relative pl-4 pr-[1px] h-full">
+							<svg class="w-full" viewbox="0 0 454 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M382 0H0V72H454L382 0Z" fill="white"/>
+							</svg>
+							<div class="absolute pl-5 top-6 left-6 flex items-center gap-2 supertitle">
+								ai
+								<div class="bg-gradient-to-l from-brown to-transparent h-[2px] w-12"></div>
+								06
+							</div>
+							<div class="bg-white -my-[1px] p-6 py-6 laptop:py-8 flex flex-col gap-4 laptop:gap-6 min-h-[290px] laptop:min-h-[340px] relative">
+								<h4 class="is-h2">Branding &amp; Identity<br/><br/></h4>
+								<p class="para-indent">Iconic visual identity systems, master logo suites, 3D CGI assets, and comprehensive brand books that define industry authority and emotional connection.</p>
+							</div>
+							<div class="absolute bottom-6 right-6 flex items-center gap-[6px] supertitle z-10">
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+							</div>
+							<svg class="w-full" viewbox="0 0 454 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M72 72L454 72L454 0L6.29444e-06 -3.96899e-05L72 72Z" fill="white"/>
+							</svg>
+						</div>
+
+						<!-- 07 Lead Generation -->
+						<div class="swiper-slide relative pl-4 pr-[1px] h-full">
+							<svg class="w-full" viewbox="0 0 454 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M382 0H0V72H454L382 0Z" fill="white"/>
+							</svg>
+							<div class="absolute pl-5 top-6 left-6 flex items-center gap-2 supertitle">
+								ai
+								<div class="bg-gradient-to-l from-brown to-transparent h-[2px] w-12"></div>
+								07
+							</div>
+							<div class="bg-white -my-[1px] p-6 py-6 laptop:py-8 flex flex-col gap-4 laptop:gap-6 min-h-[290px] laptop:min-h-[340px] relative">
+								<h4 class="is-h2">Lead Generation<br/><br/></h4>
+								<p class="para-indent">Automated B2B outbound prospecting engines, precision cold outreach, and magnetic VSL funnels that consistently generate qualified sales meetings.</p>
+							</div>
+							<div class="absolute bottom-6 right-6 flex items-center gap-[6px] supertitle z-10">
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+							</div>
+							<svg class="w-full" viewbox="0 0 454 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M72 72L454 72L454 0L6.29444e-06 -3.96899e-05L72 72Z" fill="white"/>
+							</svg>
+						</div>
+
+						<!-- 08 AI Automation -->
+						<div class="swiper-slide relative pl-4 pr-[1px] h-full">
+							<svg class="w-full" viewbox="0 0 454 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M382 0H0V72H454L382 0Z" fill="white"/>
+							</svg>
+							<div class="absolute pl-5 top-6 left-6 flex items-center gap-2 supertitle">
+								ai
+								<div class="bg-gradient-to-l from-brown to-transparent h-[2px] w-12"></div>
+								08
+							</div>
+							<div class="bg-white -my-[1px] p-6 py-6 laptop:py-8 flex flex-col gap-4 laptop:gap-6 min-h-[290px] laptop:min-h-[340px] relative">
+								<h4 class="is-h2">AI Automation<br/><br/></h4>
+								<p class="para-indent">Autonomous 24/7 AI agents, voice &amp; chat copilots, internal enterprise RAG vector knowledge bases, and intelligent API workflow orchestration.</p>
+							</div>
+							<div class="absolute bottom-6 right-6 flex items-center gap-[6px] supertitle z-10">
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+								<div class="bg-brown h-5 w-[2px]"></div>
+							</div>
+							<svg class="w-full" viewbox="0 0 454 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M72 72L454 72L454 0L6.29444e-06 -3.96899e-05L72 72Z" fill="white"/>
+							</svg>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ==========================================================================
+		     OUR 4-STEP PROCESS
+		     ========================================================================== -->
+		<section class="px-4 tablet:px-8 max-w-7xl mx-auto py-24 border-t border-white/10">
+			<div class="text-left space-y-4 mb-12">
+				<div class="text-cyan-400 font-mono text-xs uppercase tracking-widest">HOW WE EXECUTE</div>
+				<h2 class="text-3xl tablet:text-5xl font-heading font-bold uppercase">Our Engineering Framework</h2>
+				<p class="text-gray-300 max-w-2xl">A deterministic 4-stage pipeline that guarantees rapid turnaround, technical excellence, and measurable market impact.</p>
+			</div>
+
+			<div class="grid grid-cols-1 sm:grid-cols-2 laptop:grid-cols-4 gap-6">
+				<!-- Step 1 -->
+				<div class="p-6 bg-[#180907] border border-white/10 rounded-xl space-y-3 relative overflow-hidden group hover:border-cyan-400/40 transition-colors">
+					<div class="text-3xl font-heading font-bold text-cyan-400/40 group-hover:text-cyan-400 transition-colors">01</div>
+					<h3 class="text-lg font-heading font-bold text-white">Discovery &amp; Audit</h3>
+					<p class="text-xs text-gray-400 leading-relaxed">Deep-dive analysis of your brand, technical infrastructure, target audience, and competitor gaps.</p>
+				</div>
+				<!-- Step 2 -->
+				<div class="p-6 bg-[#180907] border border-white/10 rounded-xl space-y-3 relative overflow-hidden group hover:border-cyan-400/40 transition-colors">
+					<div class="text-3xl font-heading font-bold text-cyan-400/40 group-hover:text-cyan-400 transition-colors">02</div>
+					<h3 class="text-lg font-heading font-bold text-white">System Architecture</h3>
+					<p class="text-xs text-gray-400 leading-relaxed">Design systems, tech stack blueprinting, wireframes, and conversion journey planning.</p>
+				</div>
+				<!-- Step 3 -->
+				<div class="p-6 bg-[#180907] border border-white/10 rounded-xl space-y-3 relative overflow-hidden group hover:border-cyan-400/40 transition-colors">
+					<div class="text-3xl font-heading font-bold text-cyan-400/40 group-hover:text-cyan-400 transition-colors">03</div>
+					<h3 class="text-lg font-heading font-bold text-white">Build &amp; Refine</h3>
+					<p class="text-xs text-gray-400 leading-relaxed">Agile sprint execution, clean code engineering, pixel-perfect UI styling, and rigorous QA.</p>
+				</div>
+				<!-- Step 4 -->
+				<div class="p-6 bg-[#180907] border border-white/10 rounded-xl space-y-3 relative overflow-hidden group hover:border-cyan-400/40 transition-colors">
+					<div class="text-3xl font-heading font-bold text-cyan-400/40 group-hover:text-cyan-400 transition-colors">04</div>
+					<h3 class="text-lg font-heading font-bold text-white">Scale &amp; Automate</h3>
+					<p class="text-xs text-gray-400 leading-relaxed">Global CDN deployment, real-time analytics monitoring, paid growth scaling, and AI sync.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==========================================================================
+		     FAQS
+		     ========================================================================== -->
+		<section class="px-4 tablet:px-8 max-w-5xl mx-auto py-16 border-t border-white/10">
+			<div class="text-left space-y-4 mb-12">
+				<div class="text-cyan-400 font-mono text-xs uppercase tracking-widest">FREQUENTLY ASKED QUESTIONS</div>
+				<h2 class="text-3xl tablet:text-4xl font-heading font-bold uppercase">Got Questions? We Have Answers.</h2>
+			</div>
+
+			<div class="space-y-4">
+				<details class="group p-5 bg-[#180907] border border-white/10 rounded-xl cursor-pointer">
+					<summary class="flex justify-between items-center text-sm sm:text-base font-heading font-bold text-white group-open:text-cyan-400 transition-colors">
+						Can I bundle multiple services together?
+						<span class="text-cyan-400 group-open:rotate-45 transition-transform duration-300 text-xl font-mono">+</span>
+					</summary>
+					<p class="pt-3 text-xs sm:text-sm text-gray-300 leading-relaxed">
+						Yes, absolutely. Most of our high-growth clients combine Website Development with UI/UX Design, SEO &amp; GEO, and Performance Marketing or AI Automation for end-to-end synergy.
+					</p>
+				</details>
+
+				<details class="group p-5 bg-[#180907] border border-white/10 rounded-xl cursor-pointer">
+					<summary class="flex justify-between items-center text-sm sm:text-base font-heading font-bold text-white group-open:text-cyan-400 transition-colors">
+						What are typical project turnaround times?
+						<span class="text-cyan-400 group-open:rotate-45 transition-transform duration-300 text-xl font-mono">+</span>
+					</summary>
+					<p class="pt-3 text-xs sm:text-sm text-gray-300 leading-relaxed">
+						Custom websites and brand identities typically ship within 3 to 6 weeks. Performance marketing and lead generation campaigns launch within 7 to 10 days after onboarding.
+					</p>
+				</details>
+
+				<details class="group p-5 bg-[#180907] border border-white/10 rounded-xl cursor-pointer">
+					<summary class="flex justify-between items-center text-sm sm:text-base font-heading font-bold text-white group-open:text-cyan-400 transition-colors">
+						How does Generative Engine Optimization (GEO) work?
+						<span class="text-cyan-400 group-open:rotate-45 transition-transform duration-300 text-xl font-mono">+</span>
+					</summary>
+					<p class="pt-3 text-xs sm:text-sm text-gray-300 leading-relaxed">
+						GEO optimizes your digital entity citations, schema, and authority so AI models like ChatGPT, Perplexity, Gemini, and Claude recognize and recommend your brand when prospective clients prompt for solutions in your industry.
+					</p>
+				</details>
+			</div>
+		</section>
+
+		<!-- ==========================================================================
+		     BOTTOM CALL TO ACTION
+		     ========================================================================== -->
+		<section class="px-4 tablet:px-8 max-w-7xl mx-auto py-20">
+			<div class="p-8 sm:p-14 bg-gradient-to-r from-[#1f0d0b] via-[#2a130f] to-[#1a0806] border border-cyan-400/40 rounded-3xl shadow-[0_25px_60px_rgba(0,0,0,0.9),0_0_35px_rgba(0,229,255,0.2)] text-center space-y-6 relative overflow-hidden">
+				<div class="inline-flex items-center gap-2 text-cyan-400 font-mono text-xs uppercase tracking-widest bg-cyan-950/60 border border-cyan-400/30 px-3.5 py-1.5 rounded-full mx-auto">
+					<span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+					READY TO SCALE?
+				</div>
+				<h2 class="text-3xl sm:text-5xl font-heading font-bold uppercase text-white tracking-tight">
+					Let's Architect Your Next Breakthrough
+				</h2>
+				<p class="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+					Tell us about your goals and vision. Our team at NI Design will formulate a bespoke technical roadmap and growth strategy.
+				</p>
+				<div class="pt-2">
+					<button onclick="window.openProjectModal && window.openProjectModal(event)" class="inline-flex items-center gap-2 py-4 px-8 bg-gradient-to-r from-rose-700 via-rose-600 to-rose-500 hover:from-rose-600 hover:to-rose-400 text-white font-heading font-bold text-sm tracking-widest uppercase rounded-xl shadow-[0_0_25px_rgba(0,229,255,0.4)] border border-cyan-400 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer">
+						Start A Project →
+					</button>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- ==========================================================================
+	     FOOTER
+	     ========================================================================== -->
+	<footer id="footer" class="text-brown flex flex-col z-20 relative bg-white">
+		<div class="flex flex-col gap-8 bg-white relative px-6 py-12 phone:px-8 tablet:px-16 text-black">
+			<div class="flex flex-col tablet:flex-row justify-between items-start tablet:items-center gap-6 border-b border-gray-200 pb-8">
+				<a href="index.html" class="flex items-center group w-fit" rel="home">
+					<img src="images/NILOGO.png" alt="NI Design" style="height: 48px; width: auto; max-height: 52px;" class="object-contain drop-shadow-[0_0_14px_rgba(0,229,255,0.4)] transition-transform duration-300 group-hover:scale-105" />
+				</a>
+				<div class="flex flex-wrap gap-6 font-heading text-xs uppercase tracking-wider text-gray-700">
+					<a href="work.html" class="hover:text-cyan-600 transition-colors">Work</a>
+					<a href="services.html" class="hover:text-cyan-600 transition-colors font-bold text-cyan-600">Services</a>
+					<a href="index.html#industries" class="hover:text-cyan-600 transition-colors">Industries</a>
+					<a href="index.html#about" class="hover:text-cyan-600 transition-colors">About</a>
+					<a href="index.html#physics-section" class="hover:text-cyan-600 transition-colors">Insights</a>
+				</div>
+			</div>
+			<div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-mono">
+				<div>&copy; 2026 NI Design. All rights reserved.</div>
+				<div class="flex gap-4">
+					<a href="javascript:void(0)" class="hover:underline">Privacy Policy</a>
+					<a href="javascript:void(0)" class="hover:underline">Terms of Service</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- ==========================================================================
+	     START A PROJECT MODAL
+	     ========================================================================== -->
+	<div id="project-modal">
+		<div id="project-modal-backdrop" onclick="closeProjectModal()"></div>
+		<div id="project-modal-box">
+			<button type="button" onclick="closeProjectModal()" class="absolute top-5 right-5 text-gray-400 hover:text-cyan-400 hover:rotate-90 transition-all duration-300 p-2 text-2xl font-bold leading-none select-none cursor-pointer">✕</button>
+			
+			<div id="project-form-container">
+				<div class="flex items-center gap-2 text-cyan-400 text-xs font-heading font-bold uppercase tracking-widest mb-1.5">
+					<span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_8px_#00e5ff]"></span>
+					START A PROJECT
+				</div>
+				<h2 class="text-2xl sm:text-3xl font-heading font-bold mb-6 text-white tracking-wide">Tell us about your project</h2>
+				
+				<form id="project-inquiry-form" class="space-y-4" onsubmit="handleProjectSubmit(event)">
+					<div class="form-grid-2">
+						<div>
+							<label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-1.5">Name <span class="text-rose-500">*</span></label>
+							<input type="text" name="name" required placeholder="Your full name" class="w-full bg-[#2a1714] border border-white/15 focus:border-cyan-400 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition-colors" />
+						</div>
+						<div>
+							<label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-1.5">Company</label>
+							<input type="text" name="company" placeholder="Company / Brand" class="w-full bg-[#2a1714] border border-white/15 focus:border-cyan-400 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition-colors" />
+						</div>
+					</div>
+
+					<div class="form-grid-2">
+						<div>
+							<label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-1.5">Email <span class="text-rose-500">*</span></label>
+							<input type="email" name="email" required placeholder="name@company.com" class="w-full bg-[#2a1714] border border-white/15 focus:border-cyan-400 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition-colors" />
+						</div>
+						<div>
+							<label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-1.5">Phone</label>
+							<input type="tel" name="phone" placeholder="+1 (555) 000-0000" class="w-full bg-[#2a1714] border border-white/15 focus:border-cyan-400 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition-colors" />
+						</div>
+					</div>
+
+					<div>
+						<label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-2">What do you need?</label>
+						<div class="services-grid text-xs">
+							<label class="flex items-center gap-2 bg-[#2a1714] border border-white/10 hover:border-cyan-400/60 rounded-lg px-3 py-2 cursor-pointer transition-colors select-none">
+								<input type="checkbox" name="services" value="Website Development" class="accent-cyan-400" />
+								<span>Web Development</span>
+							</label>
+							<label class="flex items-center gap-2 bg-[#2a1714] border border-white/10 hover:border-cyan-400/60 rounded-lg px-3 py-2 cursor-pointer transition-colors select-none">
+								<input type="checkbox" name="services" value="UI/UX Design" class="accent-cyan-400" />
+								<span>UI/UX Design</span>
+							</label>
+							<label class="flex items-center gap-2 bg-[#2a1714] border border-white/10 hover:border-cyan-400/60 rounded-lg px-3 py-2 cursor-pointer transition-colors select-none">
+								<input type="checkbox" name="services" value="Digital Marketing" class="accent-cyan-400" />
+								<span>Digital Marketing</span>
+							</label>
+							<label class="flex items-center gap-2 bg-[#2a1714] border border-white/10 hover:border-cyan-400/60 rounded-lg px-3 py-2 cursor-pointer transition-colors select-none">
+								<input type="checkbox" name="services" value="SEO & Performance" class="accent-cyan-400" />
+								<span>SEO &amp; GEO</span>
+							</label>
+							<label class="flex items-center gap-2 bg-[#2a1714] border border-white/10 hover:border-cyan-400/60 rounded-lg px-3 py-2 cursor-pointer transition-colors select-none">
+								<input type="checkbox" name="services" value="Branding" class="accent-cyan-400" />
+								<span>Branding</span>
+							</label>
+							<label class="flex items-center gap-2 bg-[#2a1714] border border-white/10 hover:border-cyan-400/60 rounded-lg px-3 py-2 cursor-pointer transition-colors select-none">
+								<input type="checkbox" name="services" value="AI Automation" class="accent-cyan-400" />
+								<span>AI Automation</span>
+							</label>
+						</div>
+					</div>
+
+					<div>
+						<label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-2">Estimated Budget</label>
+						<div class="budget-grid">
+							<label class="budget-pill">
+								<input type="radio" name="budget" value="<$5k" class="sr-only" />
+								<span>&lt; $5,000</span>
+							</label>
+							<label class="budget-pill">
+								<input type="radio" name="budget" value="$5k-$15k" class="sr-only" checked />
+								<span>$5k – $15k</span>
+							</label>
+							<label class="budget-pill">
+								<input type="radio" name="budget" value="$15k-$50k" class="sr-only" />
+								<span>$15k – $50k</span>
+							</label>
+							<label class="budget-pill">
+								<input type="radio" name="budget" value="$50k+" class="sr-only" />
+								<span>$50,000+</span>
+							</label>
+						</div>
+					</div>
+
+					<div>
+						<label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-1.5">Project details</label>
+						<textarea name="details" rows="3" placeholder="Tell us about your timeline, goals, and vision..." class="w-full bg-[#2a1714] border border-white/15 focus:border-cyan-400 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition-colors"></textarea>
+					</div>
+
+					<button type="submit" id="submit-inquiry-btn" class="w-full py-3.5 px-6 bg-gradient-to-r from-rose-700 via-rose-600 to-rose-500 hover:from-rose-600 hover:to-rose-400 text-white font-heading font-bold text-sm tracking-widest uppercase rounded-lg shadow-[0_0_22px_rgba(0,229,255,0.4)] border border-cyan-400 transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] cursor-pointer">
+						Send Inquiry →
+					</button>
+				</form>
+			</div>
+
+			<div id="project-success-container" class="hidden text-center py-10 space-y-4">
+				<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-cyan-400/20 border border-cyan-400 text-cyan-400 text-3xl mb-2 shadow-[0_0_20px_rgba(0,229,255,0.5)]">
+					✓
+				</div>
+				<h3 class="text-2xl font-heading font-bold text-white">Inquiry Received!</h3>
+				<p class="text-gray-300 text-sm max-w-md mx-auto leading-relaxed">
+					Thank you for telling us about your project. Our team at <strong class="text-cyan-400">NI Design</strong> will review your requirements and reach out within 24 hours.
+				</p>
+				<button type="button" onclick="closeProjectModal()" class="mt-4 px-6 py-2.5 bg-white/10 hover:bg-cyan-400/20 hover:border-cyan-400 border border-white/20 text-white text-xs font-heading font-semibold uppercase tracking-wider rounded-lg transition-all cursor-pointer">
+					Close Window
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Event Handlers -->
+	<script>
+	window.openProjectModal = function(e) {
+		if (e) {
+			if (e.preventDefault) e.preventDefault();
+			if (e.stopPropagation) e.stopPropagation();
+		}
+		const modal = document.getElementById('project-modal');
+		const box = document.getElementById('project-modal-box');
+		if (modal) {
+			modal.classList.add('active');
+			document.body.style.overflow = 'hidden';
+			if (box) box.scrollTop = 0;
+		}
+	};
+
+	window.closeProjectModal = function(e) {
+		if (e) {
+			if (e.preventDefault) e.preventDefault();
+			if (e.stopPropagation) e.stopPropagation();
+		}
+		const modal = document.getElementById('project-modal');
+		if (modal) {
+			modal.classList.remove('active');
+			document.body.style.overflow = '';
+		}
+	};
+
+	window.handleProjectSubmit = function(e) {
+		e.preventDefault();
+		const btn = document.getElementById('submit-inquiry-btn');
+		if (btn) {
+			btn.disabled = true;
+			btn.innerText = 'Submitting Inquiry...';
+		}
+		setTimeout(() => {
+			document.getElementById('project-form-container').classList.add('hidden');
+			document.getElementById('project-success-container').classList.remove('hidden');
+		}, 600);
+	};
+
+	// Close on Escape key
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') window.closeProjectModal();
+	});
+
+	// Auto-hide navbar on scroll down, show on scroll up
+	document.addEventListener('DOMContentLoaded', () => {
+		let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+		const header = document.querySelector('header');
+		if (header) {
+			window.addEventListener('scroll', () => {
+				const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+				if (currentScrollY > 50) {
+					header.classList.add('nav-scrolled');
+				} else {
+					header.classList.remove('nav-scrolled');
+				}
+
+				if (currentScrollY > 80 && currentScrollY > lastScrollY + 6) {
+					header.classList.add('nav-hidden');
+					header.classList.remove('nav-visible');
+				} else if (currentScrollY < lastScrollY - 6 || currentScrollY <= 60) {
+					header.classList.remove('nav-hidden');
+					header.classList.add('nav-visible');
+				}
+				lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+			}, { passive: true });
+		}
+	});
+	</script>
+</body>
+</html>

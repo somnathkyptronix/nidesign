@@ -1,0 +1,23 @@
+{
+  "name": "solais-clone",
+  "version": "1.0.0",
+  "description": "Solais AI Website Clone",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "serve": "node server.js"
+  },
+  "keywords": [
+    "solais",
+    "clone",
+    "webgl",
+    "threejs",
+    "landing-page"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.185.1"
+  }
+}

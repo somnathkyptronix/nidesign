@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Portfolio — NI Design | Showcasing Our Digital Excellence</title>
+	<meta name="description" content="Explore our full portfolio across Web Development, App Development, Digital Marketing, Banner Design, Business Cards, Package Design, and YouTube Motion Videos." />
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="style.css" media="all" />
+	
+	<!-- Favicons -->
+	<link rel="icon" href="images/NILOGO.png" type="image/png" />
+	
+	<style>
+		/* Google Fonts */
+		@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap');
+
+		/* Particle Canvas */
+		#particle-canvas {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			cursor: pointer;
+		}
+
+		/* Typewriter Animation with Anonymous Pro & Blinking Cyan Cursor */
+		.typewriter-wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			max-width: 780px;
+			margin: 0.5rem auto 1rem;
+			min-height: 52px;
+		}
+
+		.typewriter-text {
+			font-family: 'Anonymous Pro', monospace;
+			font-size: clamp(0.85rem, 1.2vw, 1.05rem);
+			color: #e5e7eb;
+			letter-spacing: 0.02em;
+			line-height: 1.6;
+			display: inline;
+		}
+
+		.typewriter-cursor {
+			display: inline-block;
+			width: 2px;
+			height: 1.15em;
+			background-color: #4BE0DC;
+			vertical-align: -2px;
+			margin-left: 3px;
+			box-shadow: 0 0 8px #4BE0DC;
+			animation: blinkCursor 600ms infinite;
+		}
+
+		@keyframes blinkCursor {
+			0%, 100% { opacity: 1; }
+			50% { opacity: 0; }
+		}
+
+		/* Split Text Slide-In Animation for NI-DESIGN */
+		.split-text-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: var(--font-heading), sans-serif;
+			font-weight: 900;
+			text-transform: uppercase;
+			color: #fff;
+			overflow: hidden;
+			padding: 8px 0;
+			letter-spacing: -0.01em;
+			width: 100%;
+			text-align: center;
+		}
+
+		.text-part {
+			display: inline-block;
+			position: relative;
+			animation-duration: 1.6s;
+			animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+			animation-fill-mode: forwards;
+			will-change: transform, opacity;
+		}
+
+		.text-part.left {
+			transform: translateX(-100vw);
+			opacity: 0;
+			animation-name: slide-in-left;
+			color: #ffffff;
+		}
+
+		.text-part.right {
+			transform: translateX(100vw);
+			opacity: 0;
+			color: #4BE0DC !important;
+			text-shadow: 0 0 30px rgba(75, 224, 220, 0.6), 0 0 60px rgba(75, 224, 220, 0.3) !important;
+			animation-name: slide-in-right;
+		}
+
+		@keyframes slide-in-left {
+			0% {
+				transform: translateX(-100vw);
+				opacity: 0;
+			}
+			100% {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes slide-in-right {
+			0% {
+				transform: translateX(100vw);
+				opacity: 0;
+			}
+			100% {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+
+		/* Explore Portfolio Button */
+		.btn-explore-portfolio {
+			display: inline-flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			padding: 13px 30px !important;
+			background: linear-gradient(135deg, #0e7490, #06b6d4) !important;
+			color: #ffffff !important;
+			font-family: var(--font-heading), sans-serif !important;
+			font-weight: 700 !important;
+			font-size: 12px !important;
+			text-transform: uppercase !important;
+			letter-spacing: 0.08em !important;
+			border-radius: 9999px !important;
+			border: 1px solid rgba(75, 224, 220, 0.6) !important;
+			box-shadow: 0 0 25px rgba(6, 182, 212, 0.4) !important;
+			transition: all 0.3s ease !important;
+			text-decoration: none !important;
+		}
+
+		.btn-explore-portfolio:hover {
+			background: linear-gradient(135deg, #06b6d4, #38bdf8) !important;
+			box-shadow: 0 0 35px rgba(6, 182, 212, 0.7) !important;
+			transform: scale(1.04) !important;
+			color: #ffffff !important;
+		}
+
+		/* Get In Touch CTA Button */
+		.btn-get-in-touch {
+			display: inline-flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			gap: 8px !important;
+			padding: 13px 30px !important;
+			background: rgba(255, 255, 255, 0.05) !important;
+			backdrop-filter: blur(12px) !important;
+			color: #ffffff !important;
+			font-family: var(--font-heading), sans-serif !important;
+			font-weight: 700 !important;
+			font-size: 12px !important;
+			text-transform: uppercase !important;
+			letter-spacing: 0.08em !important;
+			border-radius: 9999px !important;
+			border: 1px solid rgba(255, 255, 255, 0.3) !important;
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+			transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+			cursor: pointer !important;
+			text-decoration: none !important;
+		}
+
+		.btn-get-in-touch:hover {
+			background: #4BE0DC !important;
+			border-color: #4BE0DC !important;
+			color: #000000 !important;
+			box-shadow: 0 0 30px rgba(75, 224, 220, 0.6) !important;
+			transform: scale(1.04) !important;
+		}
+
+		.btn-get-in-touch .cta-arrow {
+			transition: transform 0.3s ease !important;
+			display: inline-block !important;
+		}
+
+		.btn-get-in-touch:hover .cta-arrow {
+			transform: translateX(4px) !important;
+		}
+
+		/* Portfolio Responsive Grid with Proper Gaps */
+		.portfolio-grid {
+			display: grid !important;
+			grid-template-columns: 1fr !important;
+			gap: 24px !important;
+			row-gap: 24px !important;
+			column-gap: 24px !important;
+			width: 100% !important;
+		}
+
+		@media (min-width: 640px) {
+			.portfolio-grid {
+				grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+				gap: 24px !important;
+			}
+		}
+
+		@media (min-width: 1024px) {
+			.portfolio-grid {
+				grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+				gap: 24px !important;
+			}
+		}
+
+		/* ==========================================================================
+		   BORDERGLOW COMPONENT STYLING (Colors: #c084fc, #f472b6, #38bdf8)
+		   ========================================================================== */
+		.portfolio-card {
+			position: relative;
+			height: 280px;
+			border-radius: 24px;
+			overflow: hidden;
+			background-color: #120F17;
+			border: 1px solid rgba(255, 255, 255, 0.08);
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+			transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+			display: block;
+			text-decoration: none;
+			--mouse-x: -999px;
+			--mouse-y: -999px;
+			--glow-opacity: 0;
+		}
+
+		/* Interactive Multi-Color Border Glow Layer (Edge Tracking) */
+		.portfolio-card::before {
+			content: '';
+			position: absolute;
+			inset: -2px;
+			border-radius: inherit;
+			padding: 2px;
+			background: radial-gradient(
+				220px circle at var(--mouse-x) var(--mouse-y),
+				#38bdf8 0%,
+				#c084fc 35%,
+				#f472b6 70%,
+				transparent 100%
+			);
+			-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+			-webkit-mask-composite: xor;
+			mask-composite: exclude;
+			opacity: var(--glow-opacity, 0);
+			transition: opacity 0.3s ease;
+			pointer-events: none;
+			z-index: 20;
+		}
+
+		/* Ambient Spotlight Glow Across Surface */
+		.portfolio-card::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			border-radius: inherit;
+			background: radial-gradient(
+				300px circle at var(--mouse-x) var(--mouse-y),
+				rgba(56, 189, 248, 0.25) 0%,
+				rgba(192, 132, 252, 0.18) 40%,
+				rgba(244, 114, 182, 0.1) 70%,
+				transparent 100%
+			);
+			opacity: var(--glow-opacity, 0);
+			transition: opacity 0.3s ease;
+			pointer-events: none;
+			z-index: 5;
+		}
+
+		.portfolio-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 30px rgba(56, 189, 248, 0.35);
+			border-color: transparent;
+		}
+
+		.portfolio-card-img {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.5s ease;
+		}
+		.portfolio-card:hover .portfolio-card-img {
+			transform: scale(1.06);
+		}
+		.portfolio-card-overlay {
+			position: absolute;
+			inset: 0;
+			background: rgba(0, 0, 0, 0.35);
+			transition: background 0.3s ease;
+		}
+		.portfolio-card:hover .portfolio-card-overlay {
+			background: rgba(0, 0, 0, 0.18);
+		}
+		.portfolio-card-bottom {
+			position: absolute;
+			inset-x: 0;
+			bottom: 0;
+			padding: 1.1rem;
+			background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 60%, transparent 100%);
+			z-index: 10;
+		}
+
+		/* Tag Badges Crisp Pill Display */
+		.tag-pill {
+			font-size: 10px;
+			color: #f1f5f9;
+			background: rgba(255, 255, 255, 0.14);
+			padding: 2.5px 8px;
+			border-radius: 9999px;
+			border: 1px solid rgba(255, 255, 255, 0.12);
+			white-space: nowrap;
+			backdrop-filter: blur(8px);
+			display: inline-flex;
+			align-items: center;
+			font-weight: 500;
+		}
+		.portfolio-card-btn {
+			width: 28px;
+			height: 28px;
+			border-radius: 50%;
+			background: #4BE0DC;
+			color: #000;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 13px;
+			font-weight: bold;
+			opacity: 0;
+			transform: scale(0.8);
+			transition: all 0.3s ease;
+		}
+		.portfolio-card:hover .portfolio-card-btn {
+			opacity: 1;
+			transform: scale(1);
+		}
+
+		/* Number Badge in Section Headers */
+		.section-num-badge {
+			width: 60px;
+			height: 60px;
+			border-radius: 16px;
+			background: #4BE0DC;
+			color: #000;
+			font-family: var(--font-heading), sans-serif;
+			font-weight: 800;
+			font-size: 22px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: 0 0 25px rgba(75, 224, 220, 0.35);
+			flex-shrink: 0;
+		}
+
+		/* Video Play Button */
+		.video-play-icon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			background: rgba(225, 29, 72, 0.9);
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 16px;
+			padding-left: 3px;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+			transition: all 0.3s ease;
+			z-index: 5;
+		}
+		.portfolio-card:hover .video-play-icon {
+			background: #4BE0DC;
+			color: #000;
+			transform: translate(-50%, -50%) scale(1.1);
+			box-shadow: 0 0 25px rgba(75, 224, 220, 0.7);
+		}
+
+		/* Floating Vertical Free Audit Badge */
+		.audit-sticky-badge {
+			position: fixed;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 40;
+			writing-mode: vertical-rl;
+			text-orientation: mixed;
+			background: linear-gradient(to bottom, #2563eb, #06b6d4);
+			color: #fff;
+			font-family: var(--font-heading), monospace;
+			font-weight: 700;
+			font-size: 12px;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			padding: 14px 6px;
+			border-radius: 8px 0 0 8px;
+			box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+			transition: transform 0.3s ease;
+			cursor: pointer;
+		}
+		.audit-sticky-badge:hover {
+			transform: translateY(-50%) translateX(-4px);
+			box-shadow: 0 0 30px rgba(6, 182, 212, 0.6);
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #6A242D !important;
+		}
+		section:nth-child(odd) {
+			color: #ffffff;
+			background-color: #6A242D;
+		}
+	</style>
+</head>
+<body class="min-h-screen bg-[#6A242D] text-white selection:bg-cyan-400 selection:text-black">
+	
+	<!-- ==========================================================================
+	     NAVBAR
+	     ========================================================================== -->
+	<header class="fixed top-0 z-50 w-full duration-300 py-3 tablet:py-4">
+		<div data-navigation class="px-4 tablet:px-8 relative w-full flex items-center justify-between">
+			<a href="index.html" class="flex items-center group" rel="home">
+				<img src="images/NILOGO.png" alt="NI-DESIGN" style="height: 48px; width: auto; max-height: 52px;" class="object-contain drop-shadow-[0_0_14px_rgba(0,229,255,0.4)] transition-transform duration-300 group-hover:scale-105" />
+			</a>
+			<div class="flex-row items-center gap-3 flex">
+				<div class="menu-row flex-row items-center gap-3 hidden tablet:flex">
+					<!-- Work (Active) -->
+					<div class="dropdown dropdown-item-group relative py-2">
+						<a href="work.html" class="nav-link font-heading flex items-center gap-1 text-cyan-400">
+							<span class="btn-text">Work</span>
+							<svg class="size-3 opacity-60 transition-transform duration-300 dropdown-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+						</a>
+						<ul class="dropdown_menu dropdown_menu--animated dropdown_menu-rotateX">
+							<li class="dropdown_item dropdown_item-1"><a href="#section-web"><span>01</span> Web Development</a></li>
+							<li class="dropdown_item dropdown_item-2"><a href="#section-apps"><span>02</span> App Development</a></li>
+							<li class="dropdown_item dropdown_item-3"><a href="#section-marketing"><span>03</span> Digital Marketing</a></li>
+							<li class="dropdown_item dropdown_item-4"><a href="#section-banners"><span>04</span> Banner</a></li>
+							<li class="dropdown_item dropdown_item-5"><a href="#section-cards"><span>05</span> Business Card</a></li>
+							<li class="dropdown_item dropdown_item-6"><a href="#section-packaging"><span>06</span> Package Design</a></li>
+							<li class="dropdown_item dropdown_item-7"><a href="#section-videos"><span>07</span> YouTube Videos</a></li>
+						</ul>
+					</div>
+					<span class="font-heading">/</span>
+
+					<!-- Services -->
+					<div class="dropdown dropdown-item-group relative py-2">
+						<a href="services.html" class="nav-link font-heading flex items-center gap-1">
+							<span class="btn-text">Services</span>
+							<svg class="size-3 opacity-60 transition-transform duration-300 dropdown-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+						</a>
+						<ul class="dropdown_menu dropdown_menu--animated dropdown_menu-rotateX">
+							<li class="dropdown_item dropdown_item-1"><a href="services.html#services-showcase"><span>01</span> Website Development</a></li>
+							<li class="dropdown_item dropdown_item-2"><a href="services.html#services-showcase"><span>02</span> UI/UX Design</a></li>
+							<li class="dropdown_item dropdown_item-3"><a href="services.html#services-showcase"><span>03</span> Digital Marketing</a></li>
+							<li class="dropdown_item dropdown_item-4"><a href="services.html#services-showcase"><span>04</span> SEO &amp; GEO</a></li>
+							<li class="dropdown_item dropdown_item-5"><a href="services.html#services-showcase"><span>05</span> Performance Marketing</a></li>
+							<li class="dropdown_item dropdown_item-6"><a href="services.html#services-showcase"><span>06</span> Branding</a></li>
+							<li class="dropdown_item dropdown_item-7"><a href="services.html#services-showcase"><span>07</span> Lead Generation</a></li>
+							<li class="dropdown_item dropdown_item-8"><a href="services.html#services-showcase"><span>08</span> AI Automation</a></li>
+						</ul>
+					</div>
+					<span class="font-heading">/</span>
+
+					<!-- Industries -->
+					<div class="dropdown dropdown-item-group relative py-2">
+						<a href="index.html#industries" class="nav-link font-heading flex items-center gap-1">
+							<span class="btn-text">Industries</span>
+							<svg class="size-3 opacity-60 transition-transform duration-300 dropdown-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+						</a>
+						<ul class="dropdown_menu dropdown_menu--animated dropdown_menu-rotateX">
+							<li class="dropdown_item dropdown_item-1"><a href="index.html#industries"><span>01</span> Healthcare</a></li>
+							<li class="dropdown_item dropdown_item-2"><a href="index.html#industries"><span>02</span> Real Estate</a></li>
+							<li class="dropdown_item dropdown_item-3"><a href="index.html#industries"><span>03</span> E-commerce</a></li>
+							<li class="dropdown_item dropdown_item-4"><a href="index.html#industries"><span>04</span> Education</a></li>
+							<li class="dropdown_item dropdown_item-5"><a href="index.html#industries"><span>05</span> Hospitality</a></li>
+							<li class="dropdown_item dropdown_item-6"><a href="index.html#industries"><span>06</span> Restaurants</a></li>
+							<li class="dropdown_item dropdown_item-7"><a href="index.html#industries"><span>07</span> SaaS &amp; Technology</a></li>
+							<li class="dropdown_item dropdown_item-8"><a href="index.html#industries"><span>08</span> Professional Services</a></li>
+						</ul>
+					</div>
+					<span class="font-heading">/</span>
+
+					<!-- About -->
+					<div class="dropdown dropdown-item-group relative py-2">
+						<a href="index.html#about" class="nav-link font-heading flex items-center gap-1">
+							<span class="btn-text">About</span>
+							<svg class="size-3 opacity-60 transition-transform duration-300 dropdown-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+						</a>
+						<ul class="dropdown_menu dropdown_menu--animated dropdown_menu-rotateX">
+							<li class="dropdown_item dropdown_item-1"><a href="index.html#about"><span>01</span> Our Story</a></li>
+							<li class="dropdown_item dropdown_item-2"><a href="index.html#about"><span>02</span> Our Approach</a></li>
+							<li class="dropdown_item dropdown_item-3"><a href="index.html#about"><span>03</span> Our Team</a></li>
+							<li class="dropdown_item dropdown_item-4"><a href="index.html#about"><span>04</span> Why NI Design</a></li>
+						</ul>
+					</div>
+					<span class="font-heading">/</span>
+
+					<!-- Insights -->
+					<div class="dropdown dropdown-item-group relative py-2">
+						<a href="index.html#physics-section" class="nav-link font-heading flex items-center gap-1">
+							<span class="btn-text">Insights</span>
+							<svg class="size-3 opacity-60 transition-transform duration-300 dropdown-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+						</a>
+						<ul class="dropdown_menu dropdown_menu--animated dropdown_menu-rotateX">
+							<li class="dropdown_item dropdown_item-1"><a href="index.html#physics-section"><span>01</span> Blog</a></li>
+							<li class="dropdown_item dropdown_item-2"><a href="index.html#physics-section"><span>02</span> Digital Marketing</a></li>
+							<li class="dropdown_item dropdown_item-3"><a href="index.html#physics-section"><span>03</span> Web Development</a></li>
+							<li class="dropdown_item dropdown_item-4"><a href="index.html#physics-section"><span>04</span> Design</a></li>
+							<li class="dropdown_item dropdown_item-5"><a href="index.html#physics-section"><span>05</span> Resources</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- CTA Let's Talk -->
+				<a href="javascript:void(0)" onclick="window.openProjectModal && window.openProjectModal(event)" class="h-[44px] flex text-white button-primary font-heading ml-5 brown cursor-pointer">
+					<svg class="h-full fill-brown" viewBox="0 0 34 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M6.2653e-05 33.9999L0 208.5L34 208.5L34.0001 -0.000108298L6.2653e-05 33.9999Z"/>
+					</svg>
+					<div class="px-5 bg-brown flex items-center justify-center btn-text -mx-[1px] tracking-wide whitespace-nowrap">Let's Talk →</div>
+					<svg class="h-full fill-brown" viewBox="0 0 34 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M33.9999 174.5L34 0L-7.62939e-06 -1.48619e-06L-8.54078e-05 208.5L33.9999 174.5Z"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<!-- Sticky Free Audit Badge -->
+	<div class="audit-sticky-badge" onclick="window.openProjectModal(event)" title="Free Audit">
+		Free Audit
+	</div>
+
+	<main class="pt-16 sm:pt-20">
+		<!-- ==========================================================================
+		     HERO SECTION (CLONED FROM KYPTRONIX)
+		     ========================================================================== -->
+		<section class="w-full bg-[#6A242D] font-sans relative overflow-hidden py-16 md:py-20 min-h-[80vh] flex items-center justify-center">
+			<!-- Interactive Particle Canvas (Click to Explode, Move to Attract) -->
+			<canvas id="particle-canvas" title="Click to explode • Move mouse to attract"></canvas>
+
+			<!-- Background Grids & Radial Glows -->
+			<div class="absolute inset-0 opacity-[0.03] pointer-events-none z-[2]" style="background-image:linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);background-size:60px 60px"></div>
+			
+			<div class="absolute top-[-10%] right-[-5%] w-[450px] h-[450px] rounded-full bg-cyan-600/10 blur-[100px] pointer-events-none"></div>
+			<div class="absolute bottom-[0%] left-[-5%] w-[500px] h-[500px] rounded-full bg-blue-700/10 blur-[120px] pointer-events-none"></div>
+
+			<!-- Hero Content (Centered Middle of the Page) -->
+			<div class="container mx-auto px-6 md:px-12 relative z-10 text-center flex flex-col items-center justify-center min-h-[60vh]">
+				<div class="max-w-4xl mx-auto flex flex-col items-center justify-center space-y-6">
+					
+					<div class="inline-flex items-center justify-center">
+						<span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 backdrop-blur-sm uppercase tracking-widest">
+							Portfolio &amp; Case Studies
+						</span>
+					</div>
+
+					<!-- Animated Centered NI-DESIGN Heading -->
+					<h1 class="split-text-container text-6xl sm:text-8xl md:text-9xl font-black drop-shadow-2xl font-heading uppercase my-2">
+						<span class="text-part left">NI-</span>
+						<span class="text-part right">DESIGN</span>
+					</h1>
+
+					<div class="typewriter-wrapper">
+						<p class="typewriter-text" id="typewriter-hero"><span class="typewriter-cursor"></span></p>
+					</div>
+
+					<div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+						<a href="#section-web" class="btn-explore-portfolio">
+							Explore Portfolio ↓
+						</a>
+						<button onclick="window.openProjectModal(event)" class="btn-get-in-touch">
+							Get In Touch <span class="cta-arrow">→</span>
+						</button>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- ==========================================================================
+		     PORTFOLIO CATEGORIES (EXACT CLONE FROM KYPTRONIX.US/PORTFOLIO)
+		     ========================================================================== -->
+		<div class="w-full bg-[#6A242D] font-sans relative overflow-x-hidden py-16 min-h-screen">
+			<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image:linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);background-size:40px 40px"></div>
+			
+			<div class="container mx-auto px-6 md:px-12 lg:px-24 relative z-20">
+
+				<!-- ==================================================================
+				     01. WEB DEVELOPMENT
+				     ================================================================== -->
+				<section id="section-web" class="mb-24 scroll-mt-24">
+					<div class="flex flex-col lg:flex-row lg:items-start gap-8 mb-10">
+						<div class="flex items-center gap-4">
+							<div class="section-num-badge">01</div>
+							<div>
+								<span class="text-cyan-400 text-xs font-semibold tracking-wider uppercase font-mono">Web Development</span>
+								<h2 class="text-2xl md:text-3xl font-bold text-white font-heading">Web Development</h2>
+							</div>
+						</div>
+						<p class="text-gray-400 text-sm leading-relaxed max-w-2xl lg:mt-2">
+							Your website is the heart of your business. Make it work harder for you. At NI Design, we build high-performance websites that are not only visually stunning but also built to convert leads into loyal customers.
+						</p>
+					</div>
+
+					<div class="mb-6">
+						<span class="text-xs font-semibold text-gray-500 uppercase tracking-wider font-mono">Portfolio</span>
+					</div>
+
+					<div class="portfolio-grid">
+						
+						<!-- Item 1: Ahshotelassets -->
+						<a href="https://www.ahshotelassets.com/" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop" alt="Ahshotelassets" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Ahshotelassets</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">UI/UX Design</span>
+										<span class="tag-pill">Development</span>
+										<span class="tag-pill">Testing</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+						<!-- Item 2: Capsules Moyra -->
+						<a href="https://capsules.moyra.co/" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop" alt="Capsules Moyra" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Capsules Moyra</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">UI/UX Design</span>
+										<span class="tag-pill">Development</span>
+										<span class="tag-pill">Testing</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+						<!-- Item 3: Finozest Webflow -->
+						<a href="https://finozest.webflow.io/home-three" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=800&auto=format&fit=crop" alt="Finozest Webflow" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Finozest Webflow</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">UI/UX Design</span>
+										<span class="tag-pill">Development</span>
+										<span class="tag-pill">Testing</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+						<!-- Item 4: Get ru -->
+						<a href="https://get.ru/" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=800&auto=format&fit=crop" alt="Get ru" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Get ru</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">UI/UX Design</span>
+										<span class="tag-pill">Development</span>
+										<span class="tag-pill">Testing</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+						<!-- Item 5: Github Security -->
+						<a href="https://github.com/security/advanced-security" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=800&auto=format&fit=crop" alt="Github" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Github</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">UI/UX Design</span>
+										<span class="tag-pill">Development</span>
+										<span class="tag-pill">Testing</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+						<!-- Item 6: Hunter Healthcare -->
+						<a href="https://hunter-healthcare.com/" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop" alt="Hunter Healthcare" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Hunter Healthcare</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">UI/UX Design</span>
+										<span class="tag-pill">Development</span>
+										<span class="tag-pill">Testing</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+						<!-- Item 7: Landed Houses -->
+						<a href="https://www.landedhouses.co.uk/" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Landed Houses" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Landed Houses</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">UI/UX Design</span>
+										<span class="tag-pill">Development</span>
+										<span class="tag-pill">Testing</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+						<!-- Item 8: Optikka -->
+						<a href="https://optikka.com/" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop" alt="Optikka" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Optikka</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">UI/UX Design</span>
+										<span class="tag-pill">Development</span>
+										<span class="tag-pill">Testing</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+					</div>
+				</section>
+
+				<!-- ==================================================================
+				     02. APP DEVELOPMENT
+				     ================================================================== -->
+				<section id="section-apps" class="mb-24 scroll-mt-24">
+					<div class="flex flex-col lg:flex-row lg:items-start gap-8 mb-10">
+						<div class="flex items-center gap-4">
+							<div class="section-num-badge">02</div>
+							<div>
+								<span class="text-cyan-400 text-xs font-semibold tracking-wider uppercase font-mono">App Development</span>
+								<h2 class="text-2xl md:text-3xl font-bold text-white font-heading">App Development</h2>
+							</div>
+						</div>
+						<p class="text-gray-400 text-sm leading-relaxed max-w-2xl lg:mt-2">
+							Your app is your business in your customers' hands. Ready to unlock endless opportunities? At NI Design, we specialize in building iOS and Android apps that engage users, drive growth, and provide outstanding ROI.
+						</p>
+					</div>
+
+					<div class="mb-6">
+						<span class="text-xs font-semibold text-gray-500 uppercase tracking-wider font-mono">Portfolio</span>
+					</div>
+
+					<div class="portfolio-grid">
+						
+						<!-- App 1: Grassfeld -->
+						<a href="https://www.grassfeld.com/" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop" alt="Grassfeld" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Grassfeld</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">UI/UX Design</span>
+										<span class="tag-pill">Development</span>
+										<span class="tag-pill">Testing</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+						<!-- App 2: Allo -->
+						<a href="https://allo.restaurant/" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=800&auto=format&fit=crop" alt="Allo" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Allo</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">UI/UX Design</span>
+										<span class="tag-pill">Development</span>
+										<span class="tag-pill">Testing</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+						<!-- App 3: Captayn -->
+						<a href="https://www.captayn.com/en" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=800&auto=format&fit=crop" alt="Captayn" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Captayn</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">UI/UX Design</span>
+										<span class="tag-pill">Development</span>
+										<span class="tag-pill">Testing</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+						<!-- App 4: Burek Intexagency -->
+						<a href="https://burek.intexagency.com/en/" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=800&auto=format&fit=crop" alt="Burek Intexagency" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Burek Intexagency</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">UI/UX Design</span>
+										<span class="tag-pill">Development</span>
+										<span class="tag-pill">Testing</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+					</div>
+				</section>
+
+				<!-- ==================================================================
+				     03. DIGITAL MARKETING
+				     ================================================================== -->
+				<section id="section-marketing" class="mb-24 scroll-mt-24">
+					<div class="flex flex-col lg:flex-row lg:items-start gap-8 mb-10">
+						<div class="flex items-center gap-4">
+							<div class="section-num-badge">03</div>
+							<div>
+								<span class="text-cyan-400 text-xs font-semibold tracking-wider uppercase font-mono">Digital Marketing</span>
+								<h2 class="text-2xl md:text-3xl font-bold text-white font-heading">Digital Marketing</h2>
+							</div>
+						</div>
+						<p class="text-gray-400 text-sm leading-relaxed max-w-2xl lg:mt-2">
+							Take your business to the next level with powerful digital marketing strategies that deliver real results. We specialize in everything from SEO and PPC to social media and email campaigns—designed to drive qualified leads and boost sales.
+						</p>
+					</div>
+
+					<div class="mb-6">
+						<span class="text-xs font-semibold text-gray-500 uppercase tracking-wider font-mono">Portfolio</span>
+					</div>
+
+					<div class="portfolio-grid">
+						
+						<!-- Marketing Item 1 -->
+						<a href="javascript:void(0)" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop" alt="Social Media Post" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Social Media Post</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">UI/UX Design</span>
+										<span class="tag-pill">Development</span>
+										<span class="tag-pill">Testing</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+					</div>
+				</section>
+
+				<!-- ==================================================================
+				     04. BANNER
+				     ================================================================== -->
+				<section id="section-banners" class="mb-24 scroll-mt-24">
+					<div class="flex flex-col lg:flex-row lg:items-start gap-8 mb-10">
+						<div class="flex items-center gap-4">
+							<div class="section-num-badge">04</div>
+							<div>
+								<span class="text-cyan-400 text-xs font-semibold tracking-wider uppercase font-mono">Banner</span>
+								<h2 class="text-2xl md:text-3xl font-bold text-white font-heading">Banner</h2>
+							</div>
+						</div>
+						<p class="text-gray-400 text-sm leading-relaxed max-w-2xl lg:mt-2">
+							Your brand is more than a logo—it's your story. We help you craft a compelling brand identity that resonates with your audience and inspires action. With NI Design, your brand will shine, engage, and dominate.
+						</p>
+					</div>
+
+					<div class="mb-6">
+						<span class="text-xs font-semibold text-gray-500 uppercase tracking-wider font-mono">Portfolio</span>
+					</div>
+
+					<div class="portfolio-grid">
+						
+						<!-- Banner Item 1 -->
+						<a href="https://in.pinterest.com/pin/285908276338068738/" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&auto=format&fit=crop" alt="Banner Design" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Banner Design</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">Design</span>
+										<span class="tag-pill">Branding</span>
+										<span class="tag-pill">Modern</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+					</div>
+				</section>
+
+				<!-- ==================================================================
+				     05. BUSINESS CARD
+				     ================================================================== -->
+				<section id="section-cards" class="mb-24 scroll-mt-24">
+					<div class="flex flex-col lg:flex-row lg:items-start gap-8 mb-10">
+						<div class="flex items-center gap-4">
+							<div class="section-num-badge">05</div>
+							<div>
+								<span class="text-cyan-400 text-xs font-semibold tracking-wider uppercase font-mono">Business Card</span>
+								<h2 class="text-2xl md:text-3xl font-bold text-white font-heading">Business Card</h2>
+							</div>
+						</div>
+						<p class="text-gray-400 text-sm leading-relaxed max-w-2xl lg:mt-2">
+							Your brand is more than a logo—it's your story. We help you craft a compelling brand identity that resonates with your audience and inspires action. With NI Design, your brand will shine, engage, and dominate.
+						</p>
+					</div>
+
+					<div class="mb-6">
+						<span class="text-xs font-semibold text-gray-500 uppercase tracking-wider font-mono">Portfolio</span>
+					</div>
+
+					<div class="portfolio-grid">
+						
+						<!-- Card Item 1 -->
+						<a href="https://in.pinterest.com/pin/351912464072058/" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=800&auto=format&fit=crop" alt="Business Card" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Business Card</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">Design</span>
+										<span class="tag-pill">Branding</span>
+										<span class="tag-pill">Modern</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+					</div>
+				</section>
+
+				<!-- ==================================================================
+				     06. PACKAGE DESIGN
+				     ================================================================== -->
+				<section id="section-packaging" class="mb-24 scroll-mt-24">
+					<div class="flex flex-col lg:flex-row lg:items-start gap-8 mb-10">
+						<div class="flex items-center gap-4">
+							<div class="section-num-badge">06</div>
+							<div>
+								<span class="text-cyan-400 text-xs font-semibold tracking-wider uppercase font-mono">Package Design</span>
+								<h2 class="text-2xl md:text-3xl font-bold text-white font-heading">Package Design</h2>
+							</div>
+						</div>
+						<p class="text-gray-400 text-sm leading-relaxed max-w-2xl lg:mt-2">
+							Your brand is more than a logo—it's your story. We help you craft a compelling brand identity that resonates with your audience and inspires action. With NI Design, your brand will shine, engage, and dominate.
+						</p>
+					</div>
+
+					<div class="mb-6">
+						<span class="text-xs font-semibold text-gray-500 uppercase tracking-wider font-mono">Portfolio</span>
+					</div>
+
+					<div class="portfolio-grid">
+						
+						<!-- Package Item 1 -->
+						<a href="https://in.pinterest.com/pin/678917712547180533/" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=800&auto=format&fit=crop" alt="Package Design 1" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Package Design 1</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">Design</span>
+										<span class="tag-pill">Branding</span>
+										<span class="tag-pill">Modern</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+						<!-- Package Item 2 -->
+						<a href="https://in.pinterest.com/pin/30399366229287526/" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=800&auto=format&fit=crop" alt="Package Design 2" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Package Design 2</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">Design</span>
+										<span class="tag-pill">Branding</span>
+										<span class="tag-pill">Modern</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+					</div>
+				</section>
+
+				<!-- ==================================================================
+				     07. YOUTUBE VIDEOS
+				     ================================================================== -->
+				<section id="section-videos" class="mb-24 scroll-mt-24">
+					<div class="flex flex-col lg:flex-row lg:items-start gap-8 mb-10">
+						<div class="flex items-center gap-4">
+							<div class="section-num-badge">07</div>
+							<div>
+								<span class="text-cyan-400 text-xs font-semibold tracking-wider uppercase font-mono">YouTube Videos</span>
+								<h2 class="text-2xl md:text-3xl font-bold text-white font-heading">YouTube Videos</h2>
+							</div>
+						</div>
+						<p class="text-gray-400 text-sm leading-relaxed max-w-2xl lg:mt-2">
+							Engage your audience with compelling video content that tells your story. Our video production team creates high-quality, professional videos that capture attention, drive engagement, and deliver your message effectively across all platforms.
+						</p>
+					</div>
+
+					<div class="mb-6">
+						<span class="text-xs font-semibold text-gray-500 uppercase tracking-wider font-mono">Portfolio</span>
+					</div>
+
+					<div class="portfolio-grid">
+						
+						<!-- Video 1 -->
+						<a href="https://youtu.be/36wf2HBD3GE" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?q=80&w=800&auto=format&fit=crop" alt="Company Launching Event Animation Video" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="video-play-icon">▶</div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Company Launching Event Animation Video</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">Video</span>
+										<span class="tag-pill">Content</span>
+										<span class="tag-pill">YouTube</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+						<!-- Video 2 -->
+						<a href="https://youtu.be/QsY8fnvMn6c" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop" alt="Digital Marketing Services - Promo Video" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="video-play-icon">▶</div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Digital Marketing Services - Promo Video</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">Video</span>
+										<span class="tag-pill">Content</span>
+										<span class="tag-pill">YouTube</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+						<!-- Video 3 -->
+						<a href="https://youtu.be/25tfFfHxFmA" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=800&auto=format&fit=crop" alt="A Great Example of an Animated Explainer Video" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="video-play-icon">▶</div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">A Great Example of an Animated Explainer Video</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">Video</span>
+										<span class="tag-pill">Content</span>
+										<span class="tag-pill">YouTube</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+						<!-- Video 4 -->
+						<a href="https://youtu.be/PJxoR2l-r-U" target="_blank" rel="noopener noreferrer" class="portfolio-card group">
+							<img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?q=80&w=800&auto=format&fit=crop" alt="Promotional Motion Video Ad" class="portfolio-card-img" />
+							<div class="portfolio-card-overlay"></div>
+							<div class="video-play-icon">▶</div>
+							<div class="portfolio-card-bottom">
+								<h3 class="text-base font-bold text-white leading-tight mb-2 group-hover:text-cyan-200 transition-colors line-clamp-2">Promotional Motion Video Ad</h3>
+								<div class="flex items-center justify-between">
+									<div class="flex flex-wrap gap-1">
+										<span class="tag-pill">Video</span>
+										<span class="tag-pill">Content</span>
+										<span class="tag-pill">YouTube</span>
+									</div>
+									<div class="portfolio-card-btn">↗</div>
+								</div>
+							</div>
+						</a>
+
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+		<!-- ==========================================================================
+		     BOTTOM CALL TO ACTION
+		     ========================================================================== -->
+		<section class="px-4 tablet:px-8 max-w-7xl mx-auto py-20">
+			<div class="p-8 sm:p-14 bg-gradient-to-r from-[#531b23] via-[#6A242D] to-[#45141b] border border-cyan-400/40 rounded-3xl shadow-[0_25px_60px_rgba(0,0,0,0.5),0_0_35px_rgba(0,229,255,0.2)] text-center space-y-6 relative overflow-hidden">
+				<div class="inline-flex items-center gap-2 text-cyan-400 font-mono text-xs uppercase tracking-widest bg-cyan-950/60 border border-cyan-400/30 px-3.5 py-1.5 rounded-full mx-auto">
+					<span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+					READY TO WORK WITH US?
+				</div>
+				<h2 class="text-3xl sm:text-5xl font-heading font-bold uppercase text-white tracking-tight">
+					Let's Build Something Exceptional
+				</h2>
+				<p class="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+					Tell us about your project requirements and goals. Our engineering &amp; creative teams will formulate a tailored proposal and technical roadmap.
+				</p>
+				<div class="pt-2">
+					<button onclick="window.openProjectModal && window.openProjectModal(event)" class="inline-flex items-center gap-2 py-4 px-8 bg-gradient-to-r from-rose-700 via-rose-600 to-rose-500 hover:from-rose-600 hover:to-rose-400 text-white font-heading font-bold text-sm tracking-widest uppercase rounded-xl shadow-[0_0_25px_rgba(0,229,255,0.4)] border border-cyan-400 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer">
+						Start A Project →
+					</button>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- ==========================================================================
+	     FOOTER
+	     ========================================================================== -->
+	<footer id="footer" class="text-brown flex flex-col z-20 relative bg-white">
+		<div class="flex flex-col gap-8 bg-white relative px-6 py-12 phone:px-8 tablet:px-16 text-black">
+			<div class="flex flex-col tablet:flex-row justify-between items-start tablet:items-center gap-6 border-b border-gray-200 pb-8">
+				<a href="index.html" class="flex items-center group w-fit" rel="home">
+					<img src="images/NILOGO.png" alt="NI Design" style="height: 48px; width: auto; max-height: 52px;" class="object-contain drop-shadow-[0_0_14px_rgba(0,229,255,0.4)] transition-transform duration-300 group-hover:scale-105" />
+				</a>
+				<div class="flex flex-wrap gap-6 font-heading text-xs uppercase tracking-wider text-gray-700">
+					<a href="work.html" class="hover:text-cyan-600 transition-colors font-bold text-cyan-600">Work</a>
+					<a href="services.html" class="hover:text-cyan-600 transition-colors">Services</a>
+					<a href="index.html#industries" class="hover:text-cyan-600 transition-colors">Industries</a>
+					<a href="index.html#about" class="hover:text-cyan-600 transition-colors">About</a>
+					<a href="index.html#physics-section" class="hover:text-cyan-600 transition-colors">Insights</a>
+				</div>
+			</div>
+			<div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-mono">
+				<div>&copy; 2026 NI Design. All rights reserved.</div>
+				<div class="flex gap-4">
+					<a href="javascript:void(0)" class="hover:underline">Privacy Policy</a>
+					<a href="javascript:void(0)" class="hover:underline">Terms of Service</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- ==========================================================================
+	     START A PROJECT MODAL
+	     ========================================================================== -->
+	<div id="project-modal">
+		<div id="project-modal-backdrop" onclick="closeProjectModal()"></div>
+		<div id="project-modal-box">
+			<button type="button" onclick="closeProjectModal()" class="absolute top-5 right-5 text-gray-400 hover:text-cyan-400 hover:rotate-90 transition-all duration-300 p-2 text-2xl font-bold leading-none select-none cursor-pointer">✕</button>
+			
+			<div id="project-form-container">
+				<div class="flex items-center gap-2 text-cyan-400 text-xs font-heading font-bold uppercase tracking-widest mb-1.5">
+					<span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_8px_#00e5ff]"></span>
+					START A PROJECT / FREE AUDIT
+				</div>
+				<h2 class="text-2xl sm:text-3xl font-heading font-bold mb-6 text-white tracking-wide">Tell us about your project</h2>
+				
+				<form id="project-inquiry-form" class="space-y-4" onsubmit="handleProjectSubmit(event)">
+					<div class="form-grid-2">
+						<div>
+							<label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-1.5">Name <span class="text-rose-500">*</span></label>
+							<input type="text" name="name" required placeholder="Your full name" class="w-full bg-[#2a1714] border border-white/15 focus:border-cyan-400 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition-colors" />
+						</div>
+						<div>
+							<label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-1.5">Company</label>
+							<input type="text" name="company" placeholder="Company / Brand" class="w-full bg-[#2a1714] border border-white/15 focus:border-cyan-400 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition-colors" />
+						</div>
+					</div>
+
+					<div class="form-grid-2">
+						<div>
+							<label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-1.5">Email <span class="text-rose-500">*</span></label>
+							<input type="email" name="email" required placeholder="name@company.com" class="w-full bg-[#2a1714] border border-white/15 focus:border-cyan-400 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition-colors" />
+						</div>
+						<div>
+							<label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-1.5">Phone</label>
+							<input type="tel" name="phone" placeholder="+1 (555) 000-0000" class="w-full bg-[#2a1714] border border-white/15 focus:border-cyan-400 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition-colors" />
+						</div>
+					</div>
+
+					<div>
+						<label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-2">What do you need?</label>
+						<div class="services-grid text-xs">
+							<label class="flex items-center gap-2 bg-[#2a1714] border border-white/10 hover:border-cyan-400/60 rounded-lg px-3 py-2 cursor-pointer transition-colors select-none">
+								<input type="checkbox" name="services" value="Website Development" class="accent-cyan-400" checked />
+								<span>Web Development</span>
+							</label>
+							<label class="flex items-center gap-2 bg-[#2a1714] border border-white/10 hover:border-cyan-400/60 rounded-lg px-3 py-2 cursor-pointer transition-colors select-none">
+								<input type="checkbox" name="services" value="App Development" class="accent-cyan-400" />
+								<span>App Development</span>
+							</label>
+							<label class="flex items-center gap-2 bg-[#2a1714] border border-white/10 hover:border-cyan-400/60 rounded-lg px-3 py-2 cursor-pointer transition-colors select-none">
+								<input type="checkbox" name="services" value="Digital Marketing" class="accent-cyan-400" />
+								<span>Digital Marketing</span>
+							</label>
+							<label class="flex items-center gap-2 bg-[#2a1714] border border-white/10 hover:border-cyan-400/60 rounded-lg px-3 py-2 cursor-pointer transition-colors select-none">
+								<input type="checkbox" name="services" value="Banner Design" class="accent-cyan-400" />
+								<span>Banner Design</span>
+							</label>
+							<label class="flex items-center gap-2 bg-[#2a1714] border border-white/10 hover:border-cyan-400/60 rounded-lg px-3 py-2 cursor-pointer transition-colors select-none">
+								<input type="checkbox" name="services" value="Business Card" class="accent-cyan-400" />
+								<span>Business Card</span>
+							</label>
+							<label class="flex items-center gap-2 bg-[#2a1714] border border-white/10 hover:border-cyan-400/60 rounded-lg px-3 py-2 cursor-pointer transition-colors select-none">
+								<input type="checkbox" name="services" value="Package Design" class="accent-cyan-400" />
+								<span>Package Design</span>
+							</label>
+							<label class="flex items-center gap-2 bg-[#2a1714] border border-white/10 hover:border-cyan-400/60 rounded-lg px-3 py-2 cursor-pointer transition-colors select-none">
+								<input type="checkbox" name="services" value="Video Production" class="accent-cyan-400" />
+								<span>YouTube Videos</span>
+							</label>
+						</div>
+					</div>
+
+					<div>
+						<label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-2">Estimated Budget</label>
+						<div class="budget-grid">
+							<label class="budget-pill">
+								<input type="radio" name="budget" value="<$5k" class="sr-only" />
+								<span>&lt; $5,000</span>
+							</label>
+							<label class="budget-pill">
+								<input type="radio" name="budget" value="$5k-$15k" class="sr-only" checked />
+								<span>$5k – $15k</span>
+							</label>
+							<label class="budget-pill">
+								<input type="radio" name="budget" value="$15k-$50k" class="sr-only" />
+								<span>$15k – $50k</span>
+							</label>
+							<label class="budget-pill">
+								<input type="radio" name="budget" value="$50k+" class="sr-only" />
+								<span>$50,000+</span>
+							</label>
+						</div>
+					</div>
+
+					<div>
+						<label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-1.5">Project details</label>
+						<textarea name="details" rows="3" placeholder="Tell us about your project requirements, timeline, and goals..." class="w-full bg-[#2a1714] border border-white/15 focus:border-cyan-400 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition-colors"></textarea>
+					</div>
+
+					<button type="submit" id="submit-inquiry-btn" class="w-full py-3.5 px-6 bg-gradient-to-r from-rose-700 via-rose-600 to-rose-500 hover:from-rose-600 hover:to-rose-400 text-white font-heading font-bold text-sm tracking-widest uppercase rounded-lg shadow-[0_0_22px_rgba(0,229,255,0.4)] border border-cyan-400 transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] cursor-pointer">
+						Send Inquiry →
+					</button>
+				</form>
+			</div>
+
+			<div id="project-success-container" class="hidden text-center py-10 space-y-4">
+				<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-cyan-400/20 border border-cyan-400 text-cyan-400 text-3xl mb-2 shadow-[0_0_20px_rgba(0,229,255,0.5)]">
+					✓
+				</div>
+				<h3 class="text-2xl font-heading font-bold text-white">Inquiry Received!</h3>
+				<p class="text-gray-300 text-sm max-w-md mx-auto leading-relaxed">
+					Thank you for reaching out. The team at <strong class="text-cyan-400">NI Design</strong> will evaluate your requirements and contact you within 24 hours.
+				</p>
+				<button type="button" onclick="closeProjectModal()" class="mt-4 px-6 py-2.5 bg-white/10 hover:bg-cyan-400/20 hover:border-cyan-400 border border-white/20 text-white text-xs font-heading font-semibold uppercase tracking-wider rounded-lg transition-all cursor-pointer">
+					Close Window
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- ==========================================================================
+	     INTERACTIVE JAVASCRIPT & PARTICLE ENGINE
+	     ========================================================================== -->
+	<script>
+	// Start Project Modal Controls
+	window.openProjectModal = function(e) {
+		if (e) {
+			if (e.preventDefault) e.preventDefault();
+			if (e.stopPropagation) e.stopPropagation();
+		}
+		const modal = document.getElementById('project-modal');
+		const box = document.getElementById('project-modal-box');
+		if (modal) {
+			modal.classList.add('active');
+			document.body.style.overflow = 'hidden';
+			if (box) box.scrollTop = 0;
+		}
+	};
+
+	window.closeProjectModal = function(e) {
+		if (e) {
+			if (e.preventDefault) e.preventDefault();
+			if (e.stopPropagation) e.stopPropagation();
+		}
+		const modal = document.getElementById('project-modal');
+		if (modal) {
+			modal.classList.remove('active');
+			document.body.style.overflow = '';
+		}
+	};
+
+	window.handleProjectSubmit = function(e) {
+		e.preventDefault();
+		const btn = document.getElementById('submit-inquiry-btn');
+		if (btn) {
+			btn.disabled = true;
+			btn.innerText = 'Submitting Inquiry...';
+		}
+		setTimeout(() => {
+			document.getElementById('project-form-container').classList.add('hidden');
+			document.getElementById('project-success-container').classList.remove('hidden');
+		}, 600);
+	};
+
+	// Keyboard controls
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') {
+			window.closeProjectModal();
+		}
+	});
+
+	// Auto-hide navbar on scroll down, show on scroll up
+	document.addEventListener('DOMContentLoaded', () => {
+		let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+		const header = document.querySelector('header');
+		if (header) {
+			window.addEventListener('scroll', () => {
+				const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+				if (currentScrollY > 50) {
+					header.classList.add('nav-scrolled');
+				} else {
+					header.classList.remove('nav-scrolled');
+				}
+
+				if (currentScrollY > 80 && currentScrollY > lastScrollY + 6) {
+					header.classList.add('nav-hidden');
+					header.classList.remove('nav-visible');
+				} else if (currentScrollY < lastScrollY - 6 || currentScrollY <= 60) {
+					header.classList.remove('nav-hidden');
+					header.classList.add('nav-visible');
+				}
+				lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+			}, { passive: true });
+		}
+	});
+
+	// ==========================================================================
+	// REACT BITS PARTICLES BACKGROUND ENGINE
+	// ==========================================================================
+	(function() {
+		const canvas = document.getElementById('particle-canvas');
+		if (!canvas) return;
+		const ctx = canvas.getContext('2d');
+		let width, height;
+
+		const config = {
+			particleColors: ["#ffffff"],
+			particleCount: 200,
+			particleSpread: 10,
+			speed: 0.8,
+			particleBaseSize: 100,
+			moveParticlesOnHover: true,
+			alphaParticles: false,
+			disableRotation: false,
+			pixelRatio: 1
+		};
+
+		function resize() {
+			width = canvas.width = canvas.parentElement.offsetWidth;
+			height = canvas.height = canvas.parentElement.offsetHeight;
+		}
+		window.addEventListener('resize', resize);
+		resize();
+
+		class Particle {
+			constructor() {
+				this.reset(true);
+			}
+			reset(initial = false) {
+				const spread = config.particleSpread * 40;
+				this.x = (Math.random() - 0.5) * (width + spread);
+				this.y = (Math.random() - 0.5) * (height + spread);
+				this.z = initial ? Math.random() * 600 + 50 : 650;
+				
+				const angle = Math.random() * Math.PI * 2;
+				const spd = (Math.random() * 0.7 + 0.3) * config.speed;
+				this.vx = Math.cos(angle) * spd;
+				this.vy = Math.sin(angle) * spd;
+				this.vz = -(Math.random() * 0.4 + 0.2) * config.speed * 2;
+
+				const base = config.particleBaseSize / 45;
+				this.baseSize = (Math.random() * 1.6 + 0.8) * base;
+				this.color = config.particleColors[0] || "#ffffff";
+			}
+			update() {
+				this.x += this.vx;
+				this.y += this.vy;
+				this.z += this.vz;
+
+				if (this.z < 20) {
+					this.z = 650;
+					this.x = (Math.random() - 0.5) * (width + config.particleSpread * 40);
+					this.y = (Math.random() - 0.5) * (height + config.particleSpread * 40);
+				}
+
+				const boundX = (width + config.particleSpread * 40) / 2;
+				const boundY = (height + config.particleSpread * 40) / 2;
+
+				if (this.x < -boundX) this.x = boundX;
+				if (this.x > boundX) this.x = -boundX;
+				if (this.y < -boundY) this.y = boundY;
+				if (this.y > boundY) this.y = -boundY;
+			}
+		}
+
+		const particles = [];
+		for (let i = 0; i < config.particleCount; i++) {
+			particles.push(new Particle());
+		}
+
+		let mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
+		if (config.moveParticlesOnHover) {
+			window.addEventListener('mousemove', (e) => {
+				const rect = canvas.getBoundingClientRect();
+				if (rect.top > window.innerHeight || rect.bottom < 0) return;
+				const cx = rect.width / 2;
+				const cy = rect.height / 2;
+				mouse.targetX = (e.clientX - rect.left - cx) * 0.25;
+				mouse.targetY = (e.clientY - rect.top - cy) * 0.25;
+			}, { passive: true });
+			window.addEventListener('mouseleave', () => {
+				mouse.targetX = 0;
+				mouse.targetY = 0;
+			});
+		}
+
+		let rotationAngle = 0;
+		const fov = 400;
+
+		function animate() {
+			ctx.clearRect(0, 0, width, height);
+
+			mouse.x += (mouse.targetX - mouse.x) * 0.08;
+			mouse.y += (mouse.targetY - mouse.y) * 0.08;
+
+			if (!config.disableRotation) {
+				rotationAngle += 0.0015;
+			}
+
+			const cx = width / 2 + mouse.x;
+			const cy = height / 2 + mouse.y;
+
+			const cosR = Math.cos(rotationAngle);
+			const sinR = Math.sin(rotationAngle);
+
+			const renderList = [];
+			for (let i = 0; i < particles.length; i++) {
+				const p = particles[i];
+				p.update();
+
+				const rx = p.x * cosR - p.y * sinR;
+				const ry = p.x * sinR + p.y * cosR;
+
+				const scale = fov / (fov + p.z);
+				const projX = cx + rx * scale;
+				const projY = cy + ry * scale;
+				const size = Math.max(0.7, p.baseSize * scale * 1.4);
+				const alpha = config.alphaParticles ? 1.0 : (Math.max(0.25, Math.min(1.0, scale * 1.9)));
+
+				if (projX >= -20 && projX <= width + 20 && projY >= -20 && projY <= height + 20) {
+					renderList.push({
+						x: projX,
+						y: projY,
+						z: p.z,
+						size,
+						alpha,
+						color: p.color
+					});
+				}
+			}
+
+			renderList.sort((a, b) => b.z - a.z);
+
+			for (let i = 0; i < renderList.length; i++) {
+				const pt = renderList[i];
+				ctx.beginPath();
+				ctx.arc(pt.x, pt.y, pt.size, 0, Math.PI * 2);
+				ctx.fillStyle = pt.color;
+				ctx.globalAlpha = config.alphaParticles ? 1.0 : pt.alpha;
+				ctx.shadowBlur = 8;
+				ctx.shadowColor = 'rgba(255, 255, 255, 0.8)';
+				ctx.fill();
+			}
+			ctx.globalAlpha = 1.0;
+			ctx.shadowBlur = 0;
+
+			requestAnimationFrame(animate);
+		}
+
+		animate();
+	})();
+
+	// ==========================================================================
+	// TYPEWRITER EFFECT WITH BLINKING CURSOR AT END
+	// ==========================================================================
+	(function() {
+		const textEl = document.getElementById('typewriter-hero');
+		if (!textEl) return;
+		const message = "Explore our full spectrum of digital excellence across Web Development, Mobile Apps, Digital Marketing, Branding, Packaging, and Motion Videos.";
+		let charIndex = 0;
+
+		function renderText() {
+			const current = message.slice(0, charIndex);
+			textEl.innerHTML = current + '<span class="typewriter-cursor"></span>';
+		}
+
+		function typeNextChar() {
+			if (charIndex <= message.length) {
+				renderText();
+				if (charIndex < message.length) {
+					charIndex++;
+					setTimeout(typeNextChar, 24);
+				}
+			}
+		}
+
+		// Initial empty state with cursor
+		renderText();
+
+		// Trigger after split text animation begins
+		setTimeout(typeNextChar, 900);
+	})();
+
+	// ==========================================================================
+	// BORDERGLOW MOUSE TRACKING ENGINE (Colors: #c084fc, #f472b6, #38bdf8)
+	// ==========================================================================
+	(function() {
+		const cards = document.querySelectorAll('.portfolio-card');
+		cards.forEach(card => {
+			card.addEventListener('mousemove', (e) => {
+				const rect = card.getBoundingClientRect();
+				const x = e.clientX - rect.left;
+				const y = e.clientY - rect.top;
+				card.style.setProperty('--mouse-x', `${x}px`);
+				card.style.setProperty('--mouse-y', `${y}px`);
+				card.style.setProperty('--glow-opacity', '1');
+			});
+
+			card.addEventListener('mouseleave', () => {
+				card.style.setProperty('--glow-opacity', '0');
+			});
+		});
+	})();
+	</script>
+</body>
+</html>
