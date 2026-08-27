@@ -114,18 +114,147 @@
 				</div>
 				
 				<!-- CTA Let's Talk -->
-				<a href="javascript:void(0)" onclick="window.openProjectModal && window.openProjectModal(event)" class="h-[44px] flex text-white button-primary font-heading ml-5 brown cursor-pointer">
+				<a href="javascript:void(0)" onclick="window.openProjectModal && window.openProjectModal(event)" class="h-[44px] flex text-white button-primary font-heading ml-2 sm:ml-5 brown cursor-pointer">
 					<svg class="h-full fill-brown" viewBox="0 0 34 209" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M6.2653e-05 33.9999L0 208.5L34 208.5L34.0001 -0.000108298L6.2653e-05 33.9999Z"/>
 					</svg>
-					<div class="px-5 bg-brown flex items-center justify-center btn-text -mx-[1px] tracking-wide whitespace-nowrap">Let's Talk →</div>
+					<div class="px-3 sm:px-5 bg-brown flex items-center justify-center btn-text -mx-[1px] tracking-wide whitespace-nowrap text-xs sm:text-sm">Let's Talk →</div>
 					<svg class="h-full fill-brown" viewBox="0 0 34 209" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M33.9999 174.5L34 0L-7.62939e-06 -1.48619e-06L-8.54078e-05 208.5L33.9999 174.5Z"/>
 					</svg>
 				</a>
+
+				<!-- Mobile Hamburger Toggle Button -->
+				<button id="mobile-menu-btn" class="flex tablet:hidden flex-col justify-center items-center w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 border border-white/15 backdrop-blur-md transition-all text-white focus:outline-none z-50 cursor-pointer ml-2" aria-label="Toggle navigation menu" onclick="toggleMobileMenu()">
+					<span class="hamburger-line block w-5 h-0.5 bg-white mb-1"></span>
+					<span class="hamburger-line block w-5 h-0.5 bg-white mb-1"></span>
+					<span class="hamburger-line block w-5 h-0.5 bg-white"></span>
+				</button>
 			</div>
 		</div>
 	</header>
+
+	<!-- ==========================================================================
+	     MOBILE NAVIGATION DRAWER
+	     ========================================================================== -->
+	<div id="mobile-nav-drawer" class="tablet:hidden flex flex-col pt-24 pb-8 px-6">
+		<div class="flex flex-col gap-3 w-full max-w-md mx-auto my-auto font-heading">
+			
+			<!-- Work Accordion -->
+			<div class="mobile-nav-item border-b border-white/10 pb-2">
+				<div class="flex items-center justify-between py-2 cursor-pointer text-lg font-bold text-white hover:text-[#00e5ff] transition-colors" onclick="toggleMobileSubmenu('work-submenu', this)">
+					<span class="flex items-center gap-2">Work</span>
+					<svg class="size-4 opacity-70 mobile-submenu-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+				</div>
+				<div id="work-submenu" class="mobile-submenu flex flex-col gap-2 pl-4 text-sm text-white/80">
+					<a href="work.html" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">01 All Projects</a>
+					<a href="work.html#case-studies-section" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">02 Web Design</a>
+					<a href="work.html#case-studies-section" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">03 E-commerce</a>
+					<a href="work.html#case-studies-section" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">04 Branding</a>
+					<a href="work.html#case-studies-section" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">05 AI & Automation</a>
+					<a href="work.html#case-studies-section" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">06 Case Studies</a>
+				</div>
+			</div>
+
+			<!-- Services Accordion -->
+			<div class="mobile-nav-item border-b border-white/10 pb-2">
+				<div class="flex items-center justify-between py-2 cursor-pointer text-lg font-bold text-white hover:text-[#00e5ff] transition-colors" onclick="toggleMobileSubmenu('services-submenu', this)">
+					<span class="flex items-center gap-2">Services</span>
+					<svg class="size-4 opacity-70 mobile-submenu-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+				</div>
+				<div id="services-submenu" class="mobile-submenu flex flex-col gap-2 pl-4 text-sm text-white/80">
+					<a href="services.html#web-development" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">01 Website Development</a>
+					<a href="services.html#ui-ux-design" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">02 UI/UX Design</a>
+					<a href="services.html#digital-marketing" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">03 Digital Marketing</a>
+					<a href="services.html#seo" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">04 SEO & GEO</a>
+					<a href="services.html#performance-marketing" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">05 Performance Marketing</a>
+					<a href="services.html#branding" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">06 Branding</a>
+					<a href="services.html#lead-generation" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">07 Lead Generation</a>
+					<a href="services.html#ai-automation" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">08 AI Automation</a>
+				</div>
+			</div>
+
+			<!-- Industries Accordion -->
+			<div class="mobile-nav-item border-b border-white/10 pb-2">
+				<div class="flex items-center justify-between py-2 cursor-pointer text-lg font-bold text-white hover:text-[#00e5ff] transition-colors" onclick="toggleMobileSubmenu('industries-submenu', this)">
+					<span class="flex items-center gap-2">Industries</span>
+					<svg class="size-4 opacity-70 mobile-submenu-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+				</div>
+				<div id="industries-submenu" class="mobile-submenu flex flex-col gap-2 pl-4 text-sm text-white/80">
+					<a href="index.html#industries" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">01 Healthcare</a>
+					<a href="index.html#industries" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">02 Real Estate</a>
+					<a href="index.html#industries" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">03 E-commerce</a>
+					<a href="index.html#industries" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">04 Education</a>
+					<a href="index.html#industries" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">05 Hospitality</a>
+					<a href="index.html#industries" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">06 Restaurants</a>
+					<a href="index.html#industries" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">07 SaaS & Technology</a>
+					<a href="index.html#industries" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">08 Professional Services</a>
+				</div>
+			</div>
+
+			<!-- About Accordion -->
+			<div class="mobile-nav-item border-b border-white/10 pb-2">
+				<div class="flex items-center justify-between py-2 cursor-pointer text-lg font-bold text-white hover:text-[#00e5ff] transition-colors" onclick="toggleMobileSubmenu('about-submenu', this)">
+					<span class="flex items-center gap-2">About</span>
+					<svg class="size-4 opacity-70 mobile-submenu-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+				</div>
+				<div id="about-submenu" class="mobile-submenu flex flex-col gap-2 pl-4 text-sm text-white/80">
+					<a href="index.html#about" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">01 Our Story</a>
+					<a href="index.html#about" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">02 Our Approach</a>
+					<a href="index.html#about" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">03 Our Team</a>
+					<a href="index.html#about" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">04 Why NI Design</a>
+				</div>
+			</div>
+
+			<!-- Insights Accordion -->
+			<div class="mobile-nav-item border-b border-white/10 pb-2">
+				<div class="flex items-center justify-between py-2 cursor-pointer text-lg font-bold text-white hover:text-[#00e5ff] transition-colors" onclick="toggleMobileSubmenu('insights-submenu', this)">
+					<span class="flex items-center gap-2">Insights</span>
+					<svg class="size-4 opacity-70 mobile-submenu-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+				</div>
+				<div id="insights-submenu" class="mobile-submenu flex flex-col gap-2 pl-4 text-sm text-white/80">
+					<a href="index.html#physics-section" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">01 Blog</a>
+					<a href="index.html#physics-section" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">02 Digital Marketing</a>
+					<a href="index.html#physics-section" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">03 Web Development</a>
+					<a href="index.html#physics-section" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">04 Design</a>
+					<a href="index.html#physics-section" onclick="closeMobileMenu()" class="py-1 hover:text-[#00e5ff] block transition-colors">05 Resources</a>
+				</div>
+			</div>
+
+			<!-- CTA Button inside mobile drawer -->
+			<div class="pt-4 flex flex-col gap-3">
+				<a href="javascript:void(0)" onclick="closeMobileMenu(); window.openProjectModal && window.openProjectModal(event);" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#B81A42] to-[#6A242D] text-white font-bold text-center tracking-wider uppercase shadow-[0_0_20px_rgba(184,26,66,0.5)] active:scale-95 transition-all cursor-pointer">
+					Let's Talk →
+				</a>
+				<p class="text-xs text-center text-white/50 pt-2 font-sans">© 2026 NI Design. All rights reserved.</p>
+			</div>
+
+		</div>
+	</div>
+
+	<script>
+	function toggleMobileMenu() {
+		const drawer = document.getElementById('mobile-nav-drawer');
+		const btn = document.getElementById('mobile-menu-btn');
+		if (!drawer || !btn) return;
+		const isOpen = drawer.classList.toggle('open');
+		btn.classList.toggle('open', isOpen);
+		document.body.classList.toggle('mobile-menu-locked', isOpen);
+	}
+	function closeMobileMenu() {
+		const drawer = document.getElementById('mobile-nav-drawer');
+		const btn = document.getElementById('mobile-menu-btn');
+		if (drawer) drawer.classList.remove('open');
+		if (btn) btn.classList.remove('open');
+		document.body.classList.remove('mobile-menu-locked');
+	}
+	function toggleMobileSubmenu(id, headerEl) {
+		const submenu = document.getElementById(id);
+		const arrow = headerEl ? headerEl.querySelector('.mobile-submenu-arrow') : null;
+		if (submenu) submenu.classList.toggle('open');
+		if (arrow) arrow.classList.toggle('open');
+	}
+	</script>
 
 	<main class="pt-20">
 		<!-- ==========================================================================
