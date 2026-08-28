@@ -322,6 +322,18 @@ function toggleMobileSubmenu(id, headerEl) {
 	if (submenu) submenu.classList.toggle('open');
 	if (arrow) arrow.classList.toggle('open');
 }
+
+// Bubbly Button Click Animation Trigger
+document.addEventListener('click', function(e) {
+	const btn = e.target.closest('.bubbly-button, .button-primary, .button.second');
+	if (btn) {
+		btn.classList.remove('animate');
+		setTimeout(() => {
+			btn.classList.add('animate');
+			setTimeout(() => btn.classList.remove('animate'), 750);
+		}, 10);
+	}
+});
 </script>
 
 			<section id="loading-screen" class="grid grid-cols-12 grid-rows-12 text-white fixed top-0 left-0 w-full h-full z-[9999]">

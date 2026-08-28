@@ -249,12 +249,24 @@
 		document.body.classList.remove('mobile-menu-locked');
 	}
 	function toggleMobileSubmenu(id, headerEl) {
-		const submenu = document.getElementById(id);
-		const arrow = headerEl ? headerEl.querySelector('.mobile-submenu-arrow') : null;
-		if (submenu) submenu.classList.toggle('open');
-		if (arrow) arrow.classList.toggle('open');
+	const submenu = document.getElementById(id);
+	const arrow = headerEl ? headerEl.querySelector('.mobile-submenu-arrow') : null;
+	if (submenu) submenu.classList.toggle('open');
+	if (arrow) arrow.classList.toggle('open');
+}
+
+// Bubbly Button Click Animation Trigger
+document.addEventListener('click', function(e) {
+	const btn = e.target.closest('.bubbly-button, .button-primary, .button.second');
+	if (btn) {
+		btn.classList.remove('animate');
+		setTimeout(() => {
+			btn.classList.add('animate');
+			setTimeout(() => btn.classList.remove('animate'), 750);
+		}, 10);
 	}
-	</script>
+});
+</script>
 
 	<main class="pt-24 sm:pt-28 laptop:pt-20">
 		<!-- ==========================================================================
