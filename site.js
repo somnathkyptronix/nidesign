@@ -8272,13 +8272,19 @@
   // js/utils/smoothScroll.js
   gsapWithCSS.registerPlugin(ScrollTrigger2);
   function initSmoothScroll() {
+    const isMobile = window.innerWidth <= 1024 || ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+    if (isMobile) {
+      window.addEventListener('scroll', () => ScrollTrigger2.update(), { passive: true });
+      return;
+    }
     const lenis = new Lenis({
       overscroll: false,
-      wheelMultiplier: 0.55,   // Slower, controlled mouse wheel scrolling
-      touchMultiplier: 0.8,    // Gentle touch scrolling
-      lerp: 0.06,              // Smooth inertial damping
-      duration: 1.5,           // Elegant smooth scroll duration
-      smoothWheel: true
+      wheelMultiplier: 0.55,
+      touchMultiplier: 1,
+      lerp: 0.06,
+      duration: 1.5,
+      smoothWheel: true,
+      smoothTouch: false
     });
     lenis.on("scroll", ScrollTrigger2.update);
     gsapWithCSS.ticker.add((time) => {

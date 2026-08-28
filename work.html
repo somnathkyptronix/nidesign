@@ -24,6 +24,13 @@
 			height: 100%;
 			z-index: 1;
 			cursor: pointer;
+			touch-action: pan-y;
+			pointer-events: none;
+		}
+		@media (min-width: 1025px) {
+			#particle-canvas {
+				pointer-events: auto;
+			}
 		}
 
 		/* Typewriter Animation with Anonymous Pro & Blinking Cyan Cursor */
