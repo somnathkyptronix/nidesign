@@ -8272,25 +8272,21 @@
   // js/utils/smoothScroll.js
   gsapWithCSS.registerPlugin(ScrollTrigger2);
   function initSmoothScroll() {
-    const isMobile = window.innerWidth <= 1024 || ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-    if (isMobile) {
-      window.addEventListener('scroll', () => ScrollTrigger2.update(), { passive: true });
-      return;
-    }
     const lenis = new Lenis({
       overscroll: false,
-      wheelMultiplier: 0.55,
-      touchMultiplier: 1,
-      lerp: 0.06,
-      duration: 1.5,
+      wheelMultiplier: 0.65,
+      touchMultiplier: 1.2,
+      lerp: 0.08,
+      duration: 1.2,
       smoothWheel: true,
-      smoothTouch: false
+      syncTouch: false, smoothTouch: false
     });
     lenis.on("scroll", ScrollTrigger2.update);
     gsapWithCSS.ticker.add((time) => {
       lenis.raf(time * 1e3);
     });
     gsapWithCSS.ticker.lagSmoothing(0);
+    ScrollTrigger2.config({ ignoreMobileResize: true });
   }
 
   // js/components/accordions.js
@@ -37805,6 +37801,15 @@ void main() {
       if (this.outlinePass) {
         this.outlinePass.resolution.set(this.width, this.height);
       }
+      if (this.model) {
+        const isMobileCurrent = (this.width < 768 || window.innerWidth < 768);
+        const targetScale = isMobileCurrent ? 0.50 : 0.85;
+        this.scale = targetScale;
+        if (!this.mainTimeline || this.mainTimeline.progress() === 0) {
+          this.model.scale.set(targetScale, targetScale, targetScale);
+          this.model.position.y = isMobileCurrent ? 0.35 : 0.22;
+        }
+      }
       if (this.connectionLines) {
         this.connectionLines.forEach((line) => {
           if (line.material?.resolution) {
@@ -38370,12 +38375,9 @@ void main() {
       this.model.rotation.y = this.baseModelRotation.y;
       this.model.rotation.z = this.baseModelRotation.z;
       this.model.rotation.x = this.baseModelRotation.x;
-      this.model.position.y = 0.22;
-      this.scale = 0.85;
-      if (this.width < 768) {
-        this.scale = 0.60;
-        this.model.position.y = 0.4;
-      }
+      const isMobileInit = (this.width < 768 || window.innerWidth < 768);
+      this.scale = isMobileInit ? 0.50 : 0.85;
+      this.model.position.y = isMobileInit ? 0.35 : 0.22;
       this.model.scale.set(this.scale, this.scale, this.scale);
       this.scene.add(this.model);
       checkComplete();
@@ -38453,7 +38455,7 @@ void main() {
           const tokenRoughnessMap = roughnessMap.clone();
           const tokenUvScale = 30;
           tokenRoughnessMap.repeat.set(tokenUvScale, tokenUvScale);
-          tokenRoughnessMap.needsUpdate = true;
+          // tokenRoughnessMap.needsUpdate = true;
           const tokenMaterial = new MeshStandardMaterial({
             metalness: 1,
             normalScale: new Vector2(0.5, 0.5),
@@ -39387,9 +39389,9 @@ void main() {
         ).to(
           this.model.scale,
           {
-            x: 0.35,
-            y: 0.35,
-            z: 0.35,
+            x: (window.innerWidth < 768 ? 0.25 : 0.35),
+            y: (window.innerWidth < 768 ? 0.25 : 0.35),
+            z: (window.innerWidth < 768 ? 0.25 : 0.35),
             duration: 1
           },
           "start"
@@ -49372,12 +49374,20 @@ void main() {
       swiperWrapper.style.willChange = "transform";
       swiperWrapper.classList.remove("swiper-wrapper-autoheight");
 
-      slides.forEach((slide) => {
-        slide.style.width = window.innerWidth >= 1024 ? "400px" : window.innerWidth >= 768 ? "340px" : "290px";
-        slide.style.flexShrink = "0";
-        slide.style.marginRight = "24px";
-        slide.style.height = "auto";
-      });
+      const updateSlideSizes = () => {
+        const isMobile = window.innerWidth < 768;
+        slides.forEach((slide) => {
+          slide.style.width = window.innerWidth >= 1024 ? "400px" : isMobile ? "280px" : "340px";
+          slide.style.flexShrink = "0";
+          slide.style.marginRight = isMobile ? "16px" : "24px";
+          slide.style.height = "auto";
+        });
+      };
+      updateSlideSizes();
+      window.addEventListener("resize", () => {
+        updateSlideSizes();
+        ScrollTrigger2.refresh();
+      }, { passive: true });
 
       // Hide drag indicator since section is driven by vertical-to-horizontal page scroll
       const dragBadge = section.querySelector(".drag");
